@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div.c {
+      background-color: black;
+      color: white;
+      width: 800px;
+      padding: 0 calc(50% - 400px);
+      text-align: center;
+    }
+
+    p {
+      width: 600px;
+      margin: 18px auto;
+    }
+
+
+    div.b {
+      width: 600px;
+      margin: 60px auto 0;
+    }
+
+    div.b>p {
+      text-align: left;
+      border-bottom: 1px dotted;
+      margin: auto;
+    }
+
+    #e {
+      border: none;
+    }
+
+    p.a {
+      text-align: center;
+      background-color: violet;
+      width: auto;
+    }
+
+    div.f {
+      width: 600px;
+      height: 165px;
+      margin: auto;
+    }
+
+    div.f>p>span {
+      border: 3px solid;
+      width: 174px;
+      height: 34px;
+      background-color: #ffc0cb;
+      display: inline-block;
+      line-height: 34px;
+      text-align: center;
+    }
+
+    div.f>p>span:hover {
+      background-color: red;
+    }
+
+    .mar {
+      margin: 0 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="c">hello world 请调整浏览器窗口查看效果</div>
+  <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+    宽度600px
+    页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+  </p>
+  <div class="f">
+    <p><span>宽180高40(包含边框)</span><span class="mar">产品</span><span>产品</span></p>
+    <p><span>水平间隙30px</span><span class="mar">产品</span><span>产品</span></p>
+    <p><span>垂直间隙15px</span><span class="mar">产品</span><span>产品</span></p>
+    <p><span>边框宽度3px</span><span class="mar">产品</span><span>产品</span></p>
+  </div>
+
+  <div class="b">
+    <p>link</p>
+    <p>link</p>
+    <p>link</p>
+    <p>link</p>
+    <p id="e">link</p>
+  </div>
+  <p class="a">
+    ©版权所有<br />
+    本页所有布局均使用块元素
+  </p>
+</body>
+
+</html>

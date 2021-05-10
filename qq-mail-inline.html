@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+   
+    div.header{
+      height: 50px;
+      width: auto;
+      background-color: aqua;
+    }
+    div.sidbar{
+      width: 200px;
+      height: calc(100vh - 50px);
+      background-color: aquamarine;
+      overflow: auto;
+    }
+    div.main{
+      height: calc(100vh - 50px);
+      width: calc(100vw - 200px);
+      background-color: sandybrown;
+      margin: calc(50px - 100vh) 0 0 200px;
+      overflow: auto;
+    }
+    section{
+      width: 200px;
+      height: 500px;
+      background-color: seashell;
+      margin: 50px;
+      overflow: auto;
+    }
+    
+
+
+  </style>
+</head>
+<body>
+  <div class="header"></div>
+  <div class="sidbar">/*alert("hello");在浏览器窗口弹出
+  document.write("123???"); 在body中输出*/
+  // alert("hello");
+  // document.write("123???");
+  // console.log("12321");
+  //字体分为 衬线serif 非衬线字体 sans-serif和等宽字体monospaced
+  //doman specitic language 领域特殊语言
+  //block 块
+  marg，不占位
+  visibility：hidden 隐藏占位
+  overflow: hidden 超出部分隐藏
+  行内元素的边框不会影响内容布局
+  每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框
+  行内元素的行高只能靠更换字体或者改变字体大小改变
+  行内框的高度为light高度
+  vertical-align:调节行内文本的上下位置
+  当行内块元素触发bfc[overflow-hidden]时，以marginbox的底边为基线对齐</div>
+  <div class="main"><section>行内元素的边框不会影响内容布局
+    每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框
+    行内元素的行高只能靠更换字体或者改变字体大小改变
+    行内框的高度为light高度
+    vertical-align:调节行内文本的上下位置</section><section>当只有0个auto时，会重置margin-right为auto，然后计算auto值
+  一个auto 会自动计算auto值，如果margin-left为负值，取零，重置margin-right为auto
+  两个auto
+  如果两个都是margin的auto，额外空间会均分给左右。此时width居中
+  如果其中有一个为width的auto 同三个auto，另一个auto重置为零
+  三个auto，width会占用所有margin位置，即margin值为0
+  只要width为auto，则margin auto值为0
+  calc()可以用来设置内边距两边自动相等 公式为 calc(50% - width/2)
+  其中50%指的是继承上层块元素的值
+  行内元素不能设置宽高，但是可以设置border padding margin 不会影响垂直布局
+  水平方向margin不会重叠 display：none 隐藏一个元素，不占位
+  visibility：hidden 隐藏占位
+  overflow: hidden 超出部分隐藏
+  行内元素的边框不会影响内容布局
+  每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框
+  行内元素的行高只能靠更换字体或者改变字体大小改变
+  行内框的高度为light高度
+  vertical-align:调节行内文本的上下位置</section>
+  
+</div> 
+</body>
+</html>

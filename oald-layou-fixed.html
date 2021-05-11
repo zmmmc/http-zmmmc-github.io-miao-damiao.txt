@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,html{
+      height: 100%;
+      margin: 0;
+      
+    }
+    aside{
+      width: 200px;
+      height: 100%;
+      background-color: #af6;
+    }
+    .faside{
+      position: fixed;
+      left: calc(100vw - 200px);
+    }
+    .laside1{
+      background-color: maroon;
+      position: fixed;
+      left: calc(100vw - 400px);
+    }
+    .laside2{
+      background-color: blue;
+    }
+    header{
+      height: 50px;
+      background-color: yellow;
+      position: fixed;
+      top: 0px;
+      left: 200px;
+      right: 400px;
+    }
+    main{
+      height: calc(100% - 50px);
+      position: fixed;
+      left: 200px;
+      right: 400px;
+      top: 50px;
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <aside class="faside">4513</aside>
+  <aside class="laside1">546545</aside>
+  <aside class="laside2">5445</aside>
+  <div>
+    <header></header>
+    <main>aaa</main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="cssyangshi1.css">
+  <style>
+    div {
+      width: 100px;
+      height: 50px;
+      display: inline-block;
+      border: 1px solid;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    .top {
+      position: absolute;
+    }
+
+    .sec {
+      margin-left: 105px;
+    }
+
+    li {
+      width: 100px;
+      height: 20px;
+      border: 1px solid;
+      max-width: 200px;
+      line-height: 20px;
+    }
+
+    ul {
+      display: none;
+      transition: 3s;
+    }
+
+    div:hover ul.menu {
+      display: block;
+      background-color: burlywood;
+      transition: 3s;
+    }
+
+    ul.menu li.fl:hover ul.twice {
+      display: block;
+      background-color: pink;
+      margin-left: 100px;
+    }
+
+    ul.twice li.sl:hover ul.third {
+      display: block;
+      margin-left: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top">文件
+    <ul class="menu">
+      <li>垃圾文件1</li>
+      <li>垃圾文件2</li>
+      <li class="fl">垃圾文件3
+        <ul class="twice">
+          <li>机密文件1</li>
+          <li>机密文件2</li>
+          <li>机密文件3</li>
+          <li class="sl">机密文件4
+            <ul class="third">
+              <li>黄冈密卷</li>
+              <li>黄冈密卷</li>
+              <li>黄冈密卷</li>
+            </ul>
+          </li>
+          <li>机密文件5</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="sec">菜单</div>
+  <div>类型</div>
+</body>
+
+</html>

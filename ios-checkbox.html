@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="cssyangshi1.css" />
+  <style>
+    div{
+      width: 540px;
+      height: 280px;
+      border: 3px solid gray;
+      border-radius: 280px;
+      transition: 2s;
+    }
+    label{
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      transition: 3s ;
+      display: inline-block;
+      margin: 14px 9px 9px 13px;
+      position: absolute;
+      background-color: white;
+      box-shadow: rgb(228, 215, 215) 0px 0px 30px 5px;
+    }
+    span{
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: white;
+      margin: 60px 0 0 40px;
+       box-shadow: rgb(228, 215, 215) 0px 0px 1px 8px;
+    }
+
+    input{
+      display: none;
+    }
+     input:checked + div > label {
+      margin-left: 270px;
+    }
+     input:checked + div{
+      background-color: rgb(124, 201, 10);
+    }
+   input:checked + div > span {
+      transition: 2.5s ease-in-out;
+      margin-left: 280px;
+    }
+    input:not(:checked) + div > span{
+      transition: 4s ease-in-out;
+      margin-right: 270px;
+    }
+    
+
+    
+    
+  </style>
+</head>
+<body>
+  <input type="checkbox" name="" id="check" />
+  <div>
+    <label for="check"></label>
+    <span></span>
+  </div>
+</body>
+</html>

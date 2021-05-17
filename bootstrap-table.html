@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ div{
+      width: 500px;
+      border:1px solid #ececec;
+      padding: 10px;
+      box-shadow: 0 0 0 1px #ececec;
+    }
+
+  .table-dark,.table-hover,.table-bordered,.table-borderless,.table-striped{
+      border-collapse: collapse;
+      width: 500px;
+  }
+
+  .table-dark td,.table-hover td,.table-bordered td,.table-borderless td,.table-striped td{
+    padding-left: 5px;
+  }
+
+  .table-dark th,.table-hover th,.table-bordered th,.table-borderless th,.table-striped th{
+    text-align: left;
+    padding-left: 5px;
+  }
+
+
+ .table-dark{
+   background-color: black;
+   color: white;
+ }
+ .table-dark td{
+   border-bottom: thin solid #323539;
+ }
+ .table-dark  th{
+   border-bottom: 1px solid white;
+ }
+ .table-dark tr:hover:nth-child(n+2){
+   background-color: #323539;
+ }
+
+
+
+ .table-hover td{
+   border-bottom: thin solid #ececec;
+ }
+ .table-hover th{
+   border-bottom: 1px solid black;
+ }
+ .table-hover tr:hover:nth-child(n+2){
+   background-color: #ececec;
+ }
+
+
+ .table-bordered{
+   border: 1px solid #ececec;
+ }
+ .table-bordered th{
+   border: 1px solid #ececec;
+ }
+ .table-bordered td{
+    border: 1px solid #ececec;
+ }
+
+
+ .table-striped th{
+   border-bottom: 1px solid black;
+ }
+ .table-striped tr:nth-child(2n) {
+   background-color: #f2f2f2;
+ }
+  </style>
+</head>
+<body>
+  <div>
+  <table class="table-dark">
+    <tr>
+      <th>表头</th>
+      <th>表头</th>
+      <th>表头</th>
+      <th>表头</th>
+    </tr>
+    <tr>
+      <td>第二行第一列</td>
+      <td>第二行第二列</td>
+      <td>第二行第三列</td>
+      <td>第二行第四列</td>
+    </tr>
+    <tr>
+      <td>第三行第一列</td>
+      <td>第三行第二列</td>
+      <td>第三行第三列</td>
+      <td>第三行第四列</td>
+    </tr>
+    <tr>
+      <td>第四行第一列</td>
+      <td colspan="2">第四行第二列</td>
+      <td>第四行第四列</td>
+    </tr>
+  </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="iconfont-mi.css">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    body{
+      margin: 0px;
+      padding: 0px;
+      width: 1583px;
+      height: 7472.5px;
+    }
+    .icon{
+      font-style: normal;
+      font-size: 20px;
+    }
+    .shop em[class*="iconfont"]{
+      vertical-align: top;
+    }
+    header{
+      background-color: #333;
+      position: relative;
+      z-index: 999;
+    }
+    .topbar{
+      height: 40px;
+      width: 1226px;
+      margin: 0 auto;
+
+    }
+    .topbar_left ,.topbar_right{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      line-height: 40px;
+      color: #b0b0b0;
+      font-size: 12px;
+    }
+    .topbar_left li{
+      float: left;
+      margin-left:8px;
+    }
+    .topbar_left li>a,.topbar_right li>a{
+      text-decoration: none;
+      color: #b0b0b0;;
+    }
+    .topbar_right {
+      float: right;
+    }
+    .topbar_right li{
+      float: left;
+      margin-left: 7px;
+    }
+    .topbar_left i,.topbar_right i{
+      margin-left: 0.4em;
+      color: #5a5858;
+    }
+    .topbar_left li>a:hover, .topbar_right li>a:hover{
+      color: white;
+  
+    }
+    .pic_app>a{
+      position: relative;
+    }
+    .app_img {
+     position: absolute;
+     width: 120px;
+     height: 0px;
+     top: 25px;
+     left: -40px;
+     text-align: center;
+     color: #333;
+     overflow: hidden;
+    }
+    .app_img img{
+      width: 90px;
+      height: 90px;
+      display: block;
+      margin: 20px auto;
+    }
+  
+    .tringale{
+      display: inline-block;
+      border: 8px white solid;
+      width: 0px;
+      height: 0px;
+      border-color: rgb(0, 0, 0, 0) rgb(0, 0, 0, 0) rgb(255, 255, 255) rgb(0, 0, 0, 0);
+      position: absolute;
+      top: 11px;
+      left: 9px;
+      display: none;
+    }
+    .topbar_left li>a:hover .tringale {
+      display: inline-block;
+    }
+    .topbar_left li>a:hover .app_img{
+      top:27px;
+      background-color: white;
+      box-shadow: 0 0 5px gray;
+      transition: .5s;
+      z-index: 10;
+      height: 160px;
+    }
+    .shop{
+      width: 120px;
+      background-color: #424242;
+      text-align: center;
+      vertical-align: top;
+      position: relative;
+      z-index: 222;
+    }
+  .shop_content{
+    position: absolute;
+    height: 0px;
+    width: 316px;
+    text-align: center;
+    line-height: 100px;
+    color: #424242;
+    left: -196px;
+    top:40px;
+    overflow: hidden;
+  }
+  .topbar_right li.shop>a{
+    display: block;
+    height: 40px;
+    width: 120px;
+  }
+  .topbar_right li.shop>a:hover{
+    color: #ff7a00;
+    background-color: white;
+  }
+  .topbar_right li.shop:hover .shop_content{
+     transition: .5s;
+     background-color: white;
+     box-shadow: 0 0 5px #424242;
+     height: 100px;
+  }
+
+ 
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <ul class="topbar_left">
+        <li><a href="">小米商城</a><i>|</i></li>
+        <li><a href="">MIUI</a><i>|</i></li>
+        <li><a href="">loT</a><i>|</i></li>
+        <li><a href="">云服务</a><i>|</i></li>
+        <li><a href="">天星数科</a><i>|</i></li>
+        <li><a href="">有品</a><i>|</i></li>
+        <li><a href="">小爱开放平台</a><i>|</i></li>
+        <li><a href="">企业团购</a><i>|</i></li>
+        <li><a href="">资质证照</a><i>|</i></li>
+        <li><a href="">协议规则</a><i>|</i></li>
+        <li class="pic_app"><a href=""><span class="app_img"><img src="image/header.png" >小米商城APP</span>下载app<span class="tringale"></span></a><i>|</i></li>
+        <li><a href="">智能生活</a><i>|</i></li>
+        <li><a href="">Select Location</a></li>
+      </ul>
+      <ul class="topbar_right">
+        <li><a href="">登录</a><i>|</i></li>
+        <li><a href="">注册</a><i>|</i></li>
+        <li><a href="">消息通知</a></li>
+        <li class="shop"><a href=""><em class="icon iconfont-cart">&nbsp;</em>购物车 (0)</a><div class="shop_content">购物车里还没有商品，赶紧选购吧！</div></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="line_one">
+      <a href=""><img src="image/logo-mi2.png" alt="" width="56px" height="56px"></a>
+      <ul class="fir_se">
+        <li class="littlemi"><a href="">小米手机</a><div class="box1"><ul class="mione">
+          <li><a href=""><img src="image/mi1.png" alt="">
+              <div class="title">小米手机55</div>
+              <p class="price">12345元起</p></a>
+          <i class="separate_line"></i></li>
+          <li><a href=""><img src="image/mi2.png" alt="">
+            <div class="title">小米手机55</div>
+            <p class="price">12345元起</p>
+          </a><i class="separate_line2"></i></li>
+          <li><a href=""><img src="image/mi3.png" alt="">
+            <div class="title">小米手机55</div>
+            <p class="price">12345元起</p>
+          </a><i class="separate_line2"></i></li>
+          <li><a href=""><img src="image/mi4.png" alt="">
+            <div class="title">小米手机55</div>
+            <p class="price">12345元起</p>
+          </a><i class="separate_line2"></i></li>
+          <li><a href=""><img src="image/mi5.png" alt="">
+            <div class="title">小米手机55</div>
+            <p class="price">12345元起</p>
+          </a><i class="separate_line2"></i></li>
+          <li><a href=""><img src="image/mi6.png" alt="">
+            <div class="title">小米手机55</div>
+            <p class="price">12345元起</p>
+          </a></li>
+        </ul></div></li>
+        <li class="littlemi_two"><a href="">Redmi红米</a>
+        <div class="box2">
+          <ul class="mione">
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a>
+              <i class="separate_line"></i>
+            </li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a></li>
+          </ul>
+        </div></li>
+        <li class="littlemi_third"><a href="">电视</a>
+        <div class="box3">
+          <ul class="mione">
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a>
+              <i class="separate_line"></i>
+            </li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a></li>
+          </ul>
+        </div></li>
+        <li class="littlemi_four"><a href="">笔记本</a>
+        <div class="box4">
+          <ul class="mione">
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a>
+              <i class="separate_line"></i>
+            </li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a></li>
+          </ul>
+        </div></li>
+        <li class="littlemi_five"><a href="">家电</a>
+        <div class="box5">
+          <ul class="mione">
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a>
+              <i class="separate_line"></i>
+            </li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a></li>
+          </ul>
+        </div></li>
+        <li class="littlemi_six"><a href="">路由器</a>
+        <div class="box6">
+          <ul class="mione">
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a>
+              <i class="separate_line"></i>
+            </li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a></li>
+          </ul>
+        </div></li>
+        <li class="littlemi_seven"><a href="">智能硬件</a>
+        <div class="box7">
+          <ul class="mione">
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a>
+              <i class="separate_line"></i>
+            </li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a><i class="separate_line2"></i></li>
+            <li><a href=""><img src="image/logo-mi2.png" alt="">
+                <div class="title">小米手机55</div>
+                <p class="price">12345元起</p>
+              </a></li>
+          </ul>
+        </div></li>
+        </ul>
+        <ul class="fir_se">
+        <li><a href="">服务</a></li>
+        <li><a href="">社区</a></li>
+      </ul>
+      <form action="#">
+        <input type="text" name="thing" value="小米11" class="te">
+        <button><i class="icon iconfont-search"></i></button>
+        <ul>
+          <li>扫地机器人</li>
+          <li>全部商品</li>
+          <li>小米手机</li>
+          <li>洗衣机</li>
+          <li>空调</li>
+          <li>耳机</li>
+          <li>智能</li>
+        </ul>
+        </form>
+    </div>
+      
+    <div class="line_two">
+      <div class="bag">
+      <ul class="mitwo">
+        <li class="items_one"><a href="" class="title">手机 电话卡<em class="icon iconfont-arrow-right-big"></em></a>
+          <div class="littlebag"><ul class="littleul">
+            <a href="" class="feiwu">
+                <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+                <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+                <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+                <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+                <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+                <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+              <a href="" class="feiwu">
+                <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+                <p>小米MIX FOLD</p>
+              </a>
+              <a href="" class="feiwu">
+                <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+                <p>小米MIX FOLD</p>
+              </a>
+              <a href="" class="feiwu">
+                <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+                <p>小米MIX FOLD</p>
+              </a>
+              <a href="" class="feiwu">
+                <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+                <p>小米MIX FOLD</p>
+              </a>
+              <a href="" class="feiwu">
+                <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+                <p>小米MIX FOLD</p>
+              </a>
+              <a href="" class="feiwu">
+                <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+                <p>小米MIX FOLD</p>
+              </a>
+          </ul></div>
+        </li>
+        <li class="items_two"><a href="" class="title">电视 盒子<em class="icon iconfont-arrow-right-big"></em></a>
+        <div class="littlebag_two">
+          <ul class="littleul">
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+          </ul>
+        </div></li>
+        <li class="items_three"><a href="" class="title">笔记本 显示器<em class="icon iconfont-arrow-right-big"></em></a>
+        <div class="littlebag_three">
+          <ul class="littleul">
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+          </ul>
+        </div></li>
+        <li class="items_four"><a href="" class="title">家电 插线板<em class="icon iconfont-arrow-right-big"></em></a>
+        <div class="littlebag_four">
+          <ul class="littleul">
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+          </ul>
+        </div></li>
+        <li class="items_five"><a href="" class="title">出行 穿戴<em class="icon iconfont-arrow-right-big"></em></a>
+        <div class="littlebag_five">
+          <ul class="littleul">
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+          </ul>
+        </div></li>
+        <li class="items_six"><a href="" class="title">智能 路由器<em class="icon iconfont-arrow-right-big"></em></a>
+        <div class="littlebag_six">
+          <ul class="littleul">
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+          </ul>
+        </div></li>
+        <li class="items_seven"><a href="" class="title">电源 配件<em class="icon iconfont-arrow-right-big"></em></a>
+        <div class="littlebag_seven">
+          <ul class="littleul">
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+          </ul>
+        </div></li>
+        <li class="items_eight"><a href="" class="title">健康 儿童<em class="icon iconfont-arrow-right-big"></em></a>
+        <div class="littlebag_eight">
+          <ul class="littleul">
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+          </ul>
+        </div></li>
+        <li class="items_nine"><a href="" class="title">耳机 音箱<em class="icon iconfont-arrow-right-big"></em></a>
+        <div class="littlebag_nine">
+          <ul class="littleul">
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+          </ul>
+        </div></li>
+        <li class="items_ten"><a href="" class="title">生活 箱包<em class="icon iconfont-arrow-right-big"></em></a>
+        <div class="littlebag_ten">
+          <ul class="littleul">
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+            <a href="" class="feiwu">
+              <img src="image/mi1-1.png" alt="" width="40px" height="40px">
+              <p>小米MIX FOLD</p>
+            </a>
+          </ul>
+        </div></li>
+      </ul>
+      </div>
+    <div  class="setimg">
+
+
+      <input type="radio" name="an" id="i1" checked>
+      <input type="radio" name="an" id="i2">
+      <input type="radio" name="an" id="i3">
+      <input type="radio" name="an" id="i4">
+    <div class="right_icon">
+      <label for="i1" ><img src="image/icon-slides.png" alt=""></label>
+      <label for="i2" ><img src="image/icon-slides.png" alt=""></label>
+      <label for="i3" ><img src="image/icon-slides.png" alt=""></label>
+      <label for="i4" ><img src="image/icon-slides.png" alt=""></label>
+    </div>
+    <div class="left_icon">
+      <label for="i1"><img src="image/icon-slides.png" alt=""></label>
+      <label for="i2"><img src="image/icon-slides.png" alt=""></label>
+      <label for="i3"><img src="image/icon-slides.png" alt=""></label>
+      <label for="i4"><img src="image/icon-slides.png" alt=""></label>
+    </div> 
+    <div class="drop">
+        <label for="i1" class="slip"></label>
+        <label for="i2" class="slip"></label>
+        <label for="i3" class="slip"></label>
+        <label for="i4" class="slip"></label>
+    </div>
+    <section class="picture">
+      
+        <a href="" class="demo"><img src="image/mi2-1-1.jpg"></a>
+        <a href="" class="demo"><img src="image/mi2-1-2.jpg"></a>
+        <a href="" class="demo"><img src="image/mi2-1-4.jpeg"></a>
+        <a href="" class="demo"><img src="image/mi2-1-3.jpg"></a>
+      
+      </section>
+    </div>
+    <div class="line_three">
+      <ul class="home">
+        <li><a href=""><img src="image/3-1.png" alt="">小米秒杀</a></li>
+        <li><a href=""><img src="image/3-2.png" alt="">企业团购</a></li>
+        <li><a href=""><img src="image/3-3.png" alt="">F码通道</a></li>
+        <li><a href=""><img src="image/3-4.png" alt="">米粉卡</a></li>
+        <li><a href=""><img src="image/3-5.png" alt="">以旧换新</a></li>
+        <li><a href=""><img src="image/3-6.png" alt="">话费充值</a></li>
+      </ul>
+      <a href="" class="alone"><img src="image/3-7.jpg" alt=""></a>
+      <a href="" class="alone"><img src="image/3-8.jpg" alt=""></a>
+      <a href="" class="alone"><img src="image/3-9.png" alt=""></a>
+    </div>
+  </main>
+  <div class="pageafter">
+    <div class="conner">
+      <h2 class="ftitle">小米秒杀
+        <input type="radio" name="aa" id="hua">
+        <input type="radio" name="aa" id="hu">
+        <div class="moveicon"><label for="hua"><i class="icon iconfont-arrow-left-big"></i></label>
+        <label for="hu"><i class="icon iconfont-arrow-right-big"></i></label></div>
+          <div class="can">
+            <ul class="row_left">
+              <li><a href=""><img src="image/mi2.png" alt=""><span class="introduce">小米智能手机&nbsp; AE86</span><span
+                    class="function">极致飘逸黑科技手感</span><span class="discount_price">8888元 <i>6666元</i></span></a></li>
+              <li><a href=""><img src="image/mi2.png" alt=""><span class="introduce">小米智能手机&nbsp; AE86</span><span
+                    class="function">极致飘逸黑科技手感</span><span class="discount_price">8888元 <i>6666元</i></span></a></li>
+              <li><a href=""><img src="image/mi2.png" alt=""><span class="introduce">小米智能手机&nbsp; AE86</span><span
+                    class="function">极致飘逸黑科技手感</span><span class="discount_price">8888元 <i>6666元</i></span></a></li>
+              <li><a href=""><img src="image/mi2.png" alt=""><span class="introduce">小米智能手机&nbsp; AE86</span><span
+                    class="function">极致飘逸黑科技手感</span><span class="discount_price">8888元 <i>6666元</i></span></a></li>
+              <li><a href=""><img src="image/mi2.png" alt=""><span class="introduce">小米智能手机&nbsp; AE86</span><span
+                    class="function">极致飘逸黑科技手感</span><span class="discount_price">8888元 <i>6666元</i></span></a></li>
+              <li><a href=""><img src="image/mi2.png" alt=""><span class="introduce">小米智能手机&nbsp; AE86</span><span
+                    class="function">极致飘逸黑科技手感</span><span class="discount_price">8888元 <i>6666元</i></span></a></li>
+              <li><a href=""><img src="image/mi2.png" alt=""><span class="introduce">小米智能手机&nbsp; AE86</span><span
+                    class="function">极致飘逸黑科技手感</span><span class="discount_price">8888元 <i>6666元</i></span></a></li>
+              <li><a href=""><img src="image/mi2.png" alt=""><span class="introduce">小米智能手机&nbsp; AE86</span><span
+                    class="function">极致飘逸黑科技手感</span><span class="discount_price">8888元 <i>6666元</i></span></a></li>
+              <li><a href=""><img src="image/mi2.png" alt=""><span class="introduce">小米智能手机&nbsp; AE86</span><span
+                    class="function">极致飘逸黑科技手感</span><span class="discount_price">8888元 <i>6666元</i></span></a></li>
+              <li><a href=""><img src="image/mi2.png" alt=""><span class="introduce">小米智能手机&nbsp; AE86</span><span
+                    class="function">极致飘逸黑科技手感</span><span class="discount_price">8888元 <i>6666元</i></span></a></li>
+              <li><a href=""><img src="image/mi2.png" alt=""><span class="introduce">小米智能手机&nbsp; AE86</span><span
+                    class="function">极致飘逸黑科技手感</span><span class="discount_price">8888元 <i>6666元</i></span></a></li>
+              <li><a href=""><img src="image/mi2.png" alt=""><span class="introduce">小米智能手机&nbsp; AE86</span><span
+                    class="function">极致飘逸黑科技手感</span><span class="discount_price">8888元 <i>6666元</i></span></a></li>
+            </ul>
+          </div>
+      </h2>
+      <div class="rowcontent">
+        <div class="rowaside">
+          <div class="time">10:00场</div>
+          <img src="image/4-1.png" alt="">
+          <div class="timeend">距离结束还有</div>
+          <div class="deline">
+            <span>23</span><i>:</i><span>59</span><i>:</i><span>59</span>
+          </div>
+        </div>
+   
+      </div>
+      <div class="onlyimgone"><a href=""><img src="image/4-2.jpg" alt=""></a></div>
+
+      <h2 class="stitle">手机<a href=""><div class="moveicontwo"><span>查看更多</span><i class="icon iconfont-arrow-right-big"></i></a></div></h2>
+
+      <div class="showone">
+        <ul>
+        <li class="showimgone"><a href=""><img src="image/5-1.jpg" alt="" width="234px" height="614px"></a></li>
+        <li class="showimg"><a href=""><img src="image/5-2.jpg" alt="">Note 10 Pro<p class="advantage">天玑1100年度旗舰芯， VC液冷散热</p><p class="lowprice">1499元起  &nbsp;<span>999元</span></p></a></li>
+        <li class="showimg"><a href=""><img src="" alt=""><p class="advantage"></p><p class="lowprice"><span></span></p></a></li>
+        <li class="showimg"><a href=""><img src="" alt=""><p class="advantage"></p><p class="lowprice"><span></span></p></a></li>
+        <li class="showimg"><a href=""><img src="" alt=""><p class="advantage"></p><p class="lowprice"><span></span></p></a></li>
+        <li class="showimg"><a href=""><img src="" alt=""><p class="advantage"></p><p class="lowprice"><span></span></p></a></li>
+        <li class="showimg"><a href=""><img src="" alt=""><p class="advantage"></p><p class="lowprice"><span></span></p></a></li>
+        <li class="showimg"><a href=""><img src="" alt=""><p class="advantage"></p><p class="lowprice"><span></span></p></a></li>
+        <li class="showimg"><a href=""><img src="" alt=""><p class="advantage"></p><p class="lowprice"><span></span></p></a></li>
+      </ul>
+    </div>
+
+        <div class="onlyimgtwo"><a href=""><img src="image/4-3.jpg" alt=""></a></div>
+
+        <h2 class="ttitle">家电
+          <div class="exchange">
+          <section class="hot"><div><a href="">热门</a></div>
+            <ul>
+              <li><a href=""><img src="image/6-3.jpg" alt="">小米全面屏电视65英寸 E65X<p class="advantage">全面屏设计</p>
+                  <p class="lowprice">3099元<span>2999元</span></p>
+                </a></li>
+              <li><a href=""><img src="" alt="">
+                  <p></p>
+                  <p><span>123</span></p>
+                </a></li>
+              <li><a href=""><img src="" alt="">
+                  <p></p>
+                  <p><span></span></p>
+                </a></li>
+              <li><a href=""><img src="" alt="">
+                  <p></p>
+                  <p><span></span></p>
+                </a></li>
+              <li><a href=""><img src="" alt="">
+                  <p></p>
+                  <p><span></span></p>
+                </a></li>
+              <li><a href=""><img src="" alt="">
+                  <p></p>
+                  <p><span></span></p>
+                </a></li>
+              <li><a href=""><img src="" alt="">
+                  <p></p>
+                  <p><span></span></p>
+                </a></li>
+              <li class="smallimg_one"><a href=""><img src="" alt="">
+                  <p></p>
+                  <p>小米米家空气净化器 2S<span>549元</span></p>
+                </a></li>
+              <li class="smallimg_two"><a href="">
+                <p>浏览更多<span>热门</span></p>
+                <i class="icon iconfont-circle-arrow-right"></i>
+                </a></li>
+            </ul>
+          </section>
+          <section class="tv"><div><a href="">电视影音</a></div>
+          <ul>
+            <li><a href=""><img src="image/6-3.jpg" alt="">小米全面屏电视65英寸 E65X<p class="advantage">全面屏设计</p>
+                <p class="lowprice">3099元<span>2999元</span></p>
+              </a></li>
+            <li><a href=""><img src="" alt="">
+                <p></p>
+                <p><span></span></p>
+              </a></li>
+            <li><a href=""><img src="" alt="">
+                <p></p>
+                <p><span></span></p>
+              </a></li>
+            <li><a href=""><img src="" alt="">
+                <p></p>
+                <p><span>123</span></p>
+              </a></li>
+            <li><a href=""><img src="" alt="">
+                <p></p>
+                <p><span></span></p>
+              </a></li>
+            <li><a href=""><img src="" alt="">
+                <p></p>
+                <p><span></span></p>
+              </a></li>
+            <li><a href=""><img src="" alt="">
+                <p></p>
+                <p><span></span></p>
+              </a></li>
+            <li class="smallimg_one"><a href=""><img src="" alt="">
+                <p></p>
+                <p>小米米家空气净化器 2S<span>549元</span></p>
+              </a></li>
+            <li class="smallimg_two"><a href="">
+                <p>浏览更多<span>热门</span></p>
+                <i class="icon iconfont-circle-arrow-right"></i>
+              </a></li>
+          </ul>
+          </section>
+          </div>
+        </h2>
+        <div class="showtwo">
+          <div class="leftimg"><a href=""><img src="image/6-1.jpeg" alt=""></a><a href=""><img src="image/6-2.jpg" alt="" class="spa"></a></div>
+        </div>
+          <div class="onlyimgthree"><a href=""><img src="image/4-4.jpg" alt=""></a></div>
+
+          <h2 class="ttitle">智能
+            <div class="exchange">
+              <section class="hot">
+                <div><a href="">热门</a></div>
+                <ul class="nanv">
+                  <li><a href=""><img src="image/6-3.jpg" alt="">小米全面屏电视65英寸 E65X<p class="advantage">全面屏设计</p>
+                      <p class="lowprice">3099元<span>2999元</span></p>
+                    </a></li>
+                  <li><a href=""><img src="" alt="">
+                      <p></p>
+                      <p><span>123</span></p>
+                    </a></li>
+                  <li><a href=""><img src="" alt="">
+                      <p></p>
+                      <p><span></span></p>
+                    </a></li>
+                  <li><a href=""><img src="" alt="">
+                      <p></p>
+                      <p><span></span></p>
+                    </a></li>
+                  <li><a href=""><img src="" alt="">
+                      <p></p>
+                      <p><span></span></p>
+                    </a></li>
+                  <li><a href=""><img src="" alt="">
+                      <p></p>
+                      <p><span></span></p>
+                    </a></li>
+                  <li><a href=""><img src="" alt="">
+                      <p></p>
+                      <p><span></span></p>
+                    </a></li>
+                  <li class="smallimg_one"><a href=""><img src="" alt="">
+                      <p></p>
+                      <p>小米米家空气净化器 2S<span>549元</span></p>
+                    </a></li>
+                  <li class="smallimg_two"><a href="">
+                      <p>浏览更多<span>热门</span></p>
+                      <i class="icon iconfont-circle-arrow-right"></i>
+                    </a></li>
+                </ul>
+                </section>
+                <section class="tv">
+                  <div><a href="">安防</a></div>
+                  <ul class="nanv_diff">
+                    <li><a href=""><img src="image/6-3.jpg" alt="">小米全面屏电视65英寸 E65X<p class="advantage">全面屏设计</p>
+                        <p class="lowprice">3099元<span>2999元</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span>123</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li class="smallimg_two"><a href="">
+                        <p>浏览更多<span>热门</span></p>
+                        <i class="icon iconfont-circle-arrow-right"></i>
+                      </a></li>
+                  </ul>
+                </section>
+                <section class="tv">
+                  <div><a href="">出行</a></div>
+                  <ul class="nanv">
+                    <li><a href=""><img src="image/6-3.jpg" alt="">小米全面屏电视65英寸 E65X<p class="advantage">全面屏设计</p>
+                        <p class="lowprice">3099元<span>2999元</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span>123</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li class="smallimg_one"><a href=""><img src="" alt="">
+                        <p></p>
+                        <p>小米米家空气净化器 2S<span>549元</span></p>
+                      </a></li>
+                    <li class="smallimg_two"><a href="">
+                        <p>浏览更多<span>热门</span></p>
+                        <i class="icon iconfont-circle-arrow-right"></i>
+                      </a></li>
+                  </ul>
+                </section>
+            </h2>
+            <div class="showtwo">
+              <div class="leftimg"><a href=""><img src="image/6-1.jpeg" alt=""></a><a href=""><img src="image/6-2.jpg" alt=""
+                    class="spa"></a></div>
+            </div>
+
+            <div class="onlyimgfour"><a href=""><img src="image/4-5.jpg" alt=""></a></div>
+
+            <h2 class="ttitle">搭配
+              <div class="exchange">
+                <section class="hot">
+                  <div><a href="">热门</a></div>
+                  <ul>
+                    <li><a href=""><img src="image/6-3.jpg" alt="">小米全面屏电视65英寸 E65X<p class="advantage">全面屏设计</p>
+                        <p class="lowprice">3099元<span>2999元</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span>123</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li class="smallimg_one"><a href=""><img src="" alt="">
+                        <p></p>
+                        <p>小米米家空气净化器 2S<span>549元</span></p>
+                      </a></li>
+                    <li class="smallimg_two"><a href="">
+                        <p>浏览更多<span>热门</span></p>
+                        <i class="icon iconfont-circle-arrow-right"></i>
+                      </a></li>
+                  </ul>
+                </section>
+                <section class="tv">
+                  <div><a href="">耳机音箱</a></div>
+                  <ul>
+                    <li><a href=""><img src="image/6-3.jpg" alt="">小米全面屏电视65英寸 E65X<p class="advantage">全面屏设计</p>
+                        <p class="lowprice">3099元<span>2999元</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span>123</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li class="smallimg_one"><a href=""><img src="" alt="">
+                        <p></p>
+                        <p>小米米家空气净化器 2S<span>549元</span></p>
+                      </a></li>
+                    <li class="smallimg_two"><a href="">
+                        <p>浏览更多<span>热门</span></p>
+                        <i class="icon iconfont-circle-arrow-right"></i>
+                      </a></li>
+                  </ul>
+                </section>
+              </div>
+            </h2>
+            <div class="showtwo">
+              <div class="leftimg"><a href=""><img src="image/6-1.jpeg" alt=""></a><a href=""><img src="image/6-2.jpg" alt=""
+                    class="spa"></a></div>
+            </div>
+            <div class="onlyimgfive"><a href=""><img src="image/4-6.jpg" alt=""></a></div>
+
+            <h2 class="ttitle">配件
+              <div class="exchange">
+                <section class="hot">
+                  <div><a href="">热门</a></div>
+                  <ul class="flo">
+                    <li><a href=""><img src="image/6-3.jpg" alt="">小米全面屏电视65英寸 E65X<p class="advantage">全面屏设计</p>
+                        <p class="lowprice">3099元<span>2999元</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span>123</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li class="smallimg_one"><a href=""><img src="" alt="">
+                        <p></p>
+                        <p>小米米家空气净化器 2S<span>549元</span></p>
+                      </a></li>
+                    <li class="smallimg_two"><a href="">
+                        <p>浏览更多<span>热门</span></p>
+                        <i class="icon iconfont-circle-arrow-right"></i>
+                      </a></li>
+                  </ul>
+                </section>
+                <section class="tv">
+                  <div><a href="">充电器</a></div>
+                  <ul class="flo">
+                    <li><a href=""><img src="image/6-3.jpg" alt="">小米全面屏电视65英寸 E65X<p class="advantage">全面屏设计</p>
+                        <p class="lowprice">3099元<span>2999元</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span>123</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                      <li class="smallimg_alone"><a href="">
+                          <p>浏览更多<span>热门</span></p>
+                          <i class="icon iconfont-circle-arrow-right"></i>
+                        </a></li>
+                  </ul>
+                </section>
+              </div>
+            </h2>
+            <div class="showtwo">
+              <div class="leftimg"><a href=""><img src="image/6-1.jpeg" alt=""></a><a href=""><img src="image/6-2.jpg" alt=""
+                    class="spa"></a></div>
+            </div>
+
+            <div class="onlyimgsix"><a href=""><img src="image/4-7.jpg" alt=""></a></div>
+
+            <h2 class="ttitle">周边
+              <div class="exchange">
+                <section class="hot">
+                  <div><a href="">热门</a></div>
+                  <ul class="las">
+                    <li><a href=""><img src="image/6-3.jpg" alt="">小米全面屏电视65英寸 E65X<p class="advantage">全面屏设计</p>
+                        <p class="lowprice">3099元<span>2999元</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span>123</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li class="smallimg_one"><a href=""><img src="" alt="">
+                        <p></p>
+                        <p>小米米家空气净化器 2S<span>549元</span></p>
+                      </a></li>
+                    <li class="smallimg_two"><a href="">
+                        <p>浏览更多<span>热门</span></p>
+                        <i class="icon iconfont-circle-arrow-right"></i>
+                      </a></li>
+                  </ul>
+                </section>
+                <section class="tv">
+                  <div><a href="">出行</a></div>
+                  <ul class="las">
+                    <li><a href=""><img src="image/6-3.jpg" alt="">小米全面屏电视65英寸 E65X<p class="advantage">全面屏设计</p>
+                        <p class="lowprice">3099元<span>2999元</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span>123</span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li><a href=""><img src="" alt="">
+                        <p></p>
+                        <p><span></span></p>
+                      </a></li>
+                    <li class="smallimg_one"><a href=""><img src="" alt="">
+                        <p></p>
+                        <p>小米米家空气净化器 2S<span>549元</span></p>
+                      </a></li>
+                    <li class="smallimg_two"><a href="">
+                        <p>浏览更多<span>热门</span></p>
+                        <i class="icon iconfont-circle-arrow-right"></i>
+                      </a></li>
+                  </ul>
+                </section>
+              </div>
+            </h2>
+            <div class="showtwo">
+              <div class="leftimg"><a href=""><img src="image/6-1.jpeg" alt=""></a><a href=""><img src="image/6-2.jpg" alt=""
+                    class="spa"></a></div>
+            </div>
+
+            <div class="onlyimgseven"><a href=""><img src="image/4-8.jpg" alt=""></a></div>
+
+            <h2 class="stitle">视频<a href="">
+                <div class="moveicontwo"><span>查看更多</span><i class="icon iconfont-arrow-right-big"></i>
+              </a></div>
+            </h2>
+            <div class="video">
+              <ul class="bo_video">
+                <li><a href=""><img src="image/7-1.jpg" alt=""><i class="icon iconfont-play"></i><h3>2021年春季新品发布会第一场<p></p></h3></a></li>
+                <li><a href=""><img src="image/7-2.jpg" alt=""><i class="icon iconfont-play"></i><h3>Redmi 10X系列发布会<p>Redmi 10X系列发布会</p></h3></a></li>
+                <li><a href=""><img src="image/7-3.jpg" alt=""><i class="icon iconfont-play"></i><h3>小米10 青春版 发布会<p></p></h3></a></li>
+                <li><a href=""><img src="image/7-4.jpg" alt=""><i class="icon iconfont-play"></i><h3>小米10 8K手机拍大片<p></p></h3></a></li>
+              </ul>
+            </div>
+  </div>
+
+  <div class="container">
+    <div class="sever"><ul>
+      <li><a href=""><em class="icon iconfont-tool"></em> 预约维修服务</a></li>
+      <li><a href=""><em class="icon iconfont-circle-7"></em> 天无理由退货</a></li>
+      <li><a href=""><em class="icon iconfont-circle-15"></em> 15天免费换货</a></li>
+      <li><a href=""><em class="icon iconfont-gift"></em> 满69包邮</a></li>
+      <li><a href=""><em class="icon iconfont-location"></em> 520余家售后网点</a></li>
+    </ul></div>
+
+    <div class="footer_link">
+      <dl>
+        <dt>帮助中心</dt><dd><a href="">账户管理</a></dd><dd><a href="">购物指南</a></dd><dd><a href="">订单操作</a></dd>
+      </dl>
+      <dl>
+        <dt>服务支持<dd><a href="">售后政策</a></dd><dd><a href="">自助服务</a></dd><dd><a href="">相关下载</a></dd></dt>
+      </dl>
+      <dl>
+        <dt>线下门店<dd><a href="">小米之家</a></dd><dd><a href="">服务网点</a></dd><dd><a href="">授权体验店</a></dd></dt>
+      </dl>
+      <dl>
+        <dt>关于小米<dd><a href="">了解小米</a></dd><dd><a href="">加入小米</a></dd><dd><a href="">投资者关系</a></dd><dd><a href="">企业社会责任</a></dd><dd><a href="">廉洁举报</a></dd></dt>
+      </dl>
+      <dl>
+        <dt>关注我们<dd><a href="">新浪微博</a></dd><dd><a href="">官方微信</a></dd><dd><a href="">联系我们</a></dd><dd><a href="">公益基金会</a></dd></dt>
+      </dl>
+      <dl>
+        <dt>特色服务<dd><a href="">F 码通道</a></dd><dd><a href="">礼物码</a></dd><dd><a href="">防伪查询</a></dd></dt>
+      </dl>
+      <div class="rig_message">
+        <p class="tel">400-100-5678</p><p class="time">8:00-18:00&nbsp; (仅收市话费)</p><a href="" class="mess"><em class="icon iconfont-message2"></em> 人工客服</a>
+        <p class="payatt">关注小米:<a href="" class="wb"></a><a href="" class="wx"><img src="image/wx-img.png" alt=""></a></p>
+      </div>
+    </div>
+
+  </div>
+  <div class="basement">
+    <div class="bottle">
+      <div class="logal"><img src="image/logo-mi2.png" alt=""></div>
+      <p class="textlink"><a href="">小米商城 | </a><a href="">MIUI | </a><a href="">米家 | </a><a href="">米聊 | </a><a href="">多看 | </a>
+        <a href="">游戏 | </a><a href="">政企服务 | </a><a href="">小米天猫店 | </a><a href="">小米集团隐私政策 | </a>
+        <a href="">小米公司儿童信息保护规则 | </a><a href="">小米商城隐私政策 | </a><a href="">小米商城用户协议 | </a>
+        <a href="">问题反馈 | </a><a href="">Select Location</a><br> <a href="">北京互联网法院法律服务工作站 |</a>
+        <a href="">中国消费者协会 | </a><a href="">北京市消费者协会</a>
+      </p>
+      <p class="premit">&copy; <a href="">mi.com</a> 京ICP证110507号 <a href="">京ICP备10046444号</a> 
+        <a href="">京公网安备11010802020134号</a> <a href="">京网文[2020]0276-042号</a><br>
+        <a href="">&nbsp;(京)&nbsp;网域平台备字&nbsp;(2018)&nbsp;第00005号</a> 
+        <a href="">互联网药品信息服务资格证 (京)-非经营性-2014-0090</a> 
+        <a href="">营业执照</a> <a href="">医疗器械质量公告</a><br>
+        <a href="">增值电信业务许可证</a> 网络食品经营备案 京食药网经营备案202010048&nbsp; <a href="">食品经营许可证</a><br>
+        违法和不良信息举报电话：171-5104-4404 <a href="">知识产权侵权投诉</a>  本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+      </p>
+      <div class="info">
+        <a href=""><img src="image/truste.png" alt=""></a><a href=""><img src="image/v-logo-2.png" alt=""></a><a href=""><img src="image/icon3.png" alt=""></a>
+        <a href=""><img src="image/icon-4.png" alt=""></a><a href=""><img src="image/orange.png" alt=""><img src="image/green.png" alt="" class="lastone"></a>
+      </div>
+    </div>
+      <div class="level">
+        <p>让全球每个人都能享受科技带来的美好生活</p>
+      </div>
+  </div>
+
+
+
+  <div class="fix_icons"><ul>
+    <li><i class="icon iconfont-phone"></i><p>手机APP</p></li>
+    <li><i class="icon iconfont-face"></i><p>个人中心</p></li>
+    <li><i class="icon iconfont-tool"></i><p>售后服务</p></li>
+    <li><i class="icon iconfont-face-laugh"></i><p>人工客服</p></li>
+    <li><i class="icon iconfont-cart"></i><p class="maimai">购物车</p></li>
+  </ul></div>
+</body>
+</html>
+
+

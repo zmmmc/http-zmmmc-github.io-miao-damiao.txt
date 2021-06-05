@@ -731,7 +731,7 @@ h2.stitle{
   margin: 0;
   padding: 0;
   height: 614px;
-  width: 1226px;
+  width: 1240px;
   list-style: none;
   display: flex;
   flex-flow: wrap column;
@@ -949,6 +949,7 @@ div.exchange section ul li a:hover{
   width: 85px;
   height: 73.5px;
   margin: -20px 0 0 20px;
+  color: black;
 }
 .exchange ul li.smallimg_one span{
   display: block;
@@ -1273,6 +1274,7 @@ ul.las{
   width: 130px;
   height: 15px;
   margin: -5px auto;
+  white-space: nowrap;
 }
 .rig_message a.mess{
   display: block;
@@ -1407,10 +1409,11 @@ p a:hover{
   margin: 50px auto;
   text-align: center;
 }
-.fix_icons{
+div.fix_icons{
   position: fixed;
   top: 70px;
   right: 0px;
+  z-index: 6666;
 }
 .fix_icons ul{
   width: 84px;
@@ -1426,6 +1429,9 @@ p a:hover{
   position: relative;
   color: #999;
   background-color: white;
+}
+.fix_icons ul li:last-child{
+  margin-top: 15px;
 }
 .fix_icons ul li i{
   display: block;
@@ -1446,6 +1452,15 @@ p a:hover{
 }
 .fix_icons ul li:hover{
   color: #ff7a00;
+}
+@media(max-width:1000px){
+  .fix_icons ul li p{
+    display: none;
+  }
+  div.fix_icons{
+    transform: scale(0.5);
+    margin-right: -21px;
+  }
 }
 
 

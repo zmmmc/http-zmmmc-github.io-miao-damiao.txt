@@ -1,0 +1,120 @@
+<script id="ch0103/01" type="xx">
+var a = Number(prompt("请输入数值a:" + a))
+var b = Number(prompt("请输入数值b:" + b))
+console.log(a + b)
+</script>
+<script id="ch0103/02" type="xx">
+var a = Number(prompt("请输入数值a:" + a))
+var b = Number(prompt("请输入数值b:" + b)) 
+var c = Number(prompt("请输入数值c:" + c)) 
+console.log((a + b) * c)
+</script>
+<script id="ch0103/03" type="xx">
+var a = Number(prompt("请输入数值a:" + a))
+var b = Number(prompt("请输入数值b:" + b)) 
+var c = Number(prompt("请输入数值c:" + c)) 
+console.log((a + b) / c)
+</script>
+<script id="ch0103/04" type="xx">
+var a = Number(prompt("请输入数值a:" + a))
+var b = Number(prompt("请输入数值b:" + b)) 
+console.log((a / b).toFixed(0))
+console.log( a % b)
+</script>
+<script id="ch0103/05" type="xx">
+var a = Number(prompt("请输入数值a:" + a))
+var b = Number(prompt("请输入数值b:" + b)) 
+console.log((a / b).toFixed(9))
+</script>
+<script id="ch0103/06" type="xx">
+var a = Number(prompt("请输入确诊数值a:" + a))
+var b = Number(prompt("请输入死亡数值b:" + b)) 
+var c = (b / a * 100) + "%"
+console.log(c)
+</script>
+<script id="ch0103/07" type="xx">
+var a = Number(prompt("请输入数值a:" + a))
+var b = Number(prompt("请输入数值b:" + b)) 
+var c = Number(prompt("请输入数值a:" + c))
+var d = Number(prompt("请输入数值b:" + d)) 
+var x = Number(prompt("请输入数值a:" + x))
+console.log((a * Math.pow(x,3) + b * x * x + c * x + d).toFixed(7))
+</script>
+<script id="ch0103/08" type="xx">
+var a = Number(prompt("请输入华氏度数值a:" + a))
+console.log((5 * (a - 32) / 9).toFixed(5))
+</script>
+<script id="ch0103/09" type="xx">
+var r = Number(prompt("请输入圆半径数值r:" + r))
+var pi = 3.14159
+console.log(2 * r)
+console.log((2 * pi * r).toFixed(4))
+console.log((pi * r * r).toFixed(4))
+</script>
+<script id="ch0103/10" type="xx">
+var a = Number(prompt("请输入r1电阻数值a:" + a))
+var b = Number(prompt("请输入r2电阻数值b:" + b))
+console.log((1 / (1 / a + 1 / b)).toFixed(2))
+</script>
+<script id="ch0103/11" type="xx">
+var a = Number(prompt("请输入数值a:" + a))
+var b = Number(prompt("请输入数值b:" + b))
+console.log((a % b).toFixed(4))
+</script>
+<script id="ch0103/12" type="xx">
+var r = Number(prompt("请输入小于100的非0球半径数值r:" + r))
+var pi = 3.14
+console.log((4 / (3 * pi * Math.pow(r,3))).toFixed2)
+</script>
+<script id="ch0103/13" type="xx">
+var x = Number(prompt("请输入一个三位数x:" + x))
+var a = x % 10
+var b = (x / 100).toFixed(0)
+var c = ((x - b * 100) / 10).toFixed(0)
+console.log("a" + "c" + "b")
+</script>
+<script id="ch0103/14" type="xx">
+var r = Number(prompt("请输入圆桶底面半径数值r:" + r))
+var h = Number(prompt("请输入圆桶深度数值h:" + h))
+var pi = 3.14159
+var x = pi * r * r * h / 1000
+console.log(x >= 20 ? "够喝" ： "不够喝") 
+</script>
+<script id="ch0103/15" type="xx">
+var n = Number(prompt("请输入原箱子内苹果数值n:" + n))
+var x = Number(prompt("请输入吃掉一个苹果需要时间x数值x:" + x)) 
+var y = Number(prompt("请输入经过小时数值y:" + y))
+console.log(n - Math.ceil(y / x))
+</script>
+<script id="ch0103/16" type="xx">
+var a = Number(prompt("请输入坐标A上x轴数值a:" + a))
+var b = Number(prompt("请输入坐标A上y轴数值b:" + b))
+var c = Number(prompt("请输入坐标B上x轴数值c:" + c))
+var d = Number(prompt("请输入坐标B上y轴数值d:" + d))
+Math.abs(a) < 10000
+console.log(Math.sqrt((Math.pow(Math.abs(c-a),2)+Math.pow(Math.abs(d-b),2))).toFixed(3))
+</script>
+
+<script id="ch0103/18" type="xx">
+var a = Number(prompt("请输入等差数列a1数值a:" + a))
+var b = Number(prompt("请输入等差数列a2数值b:" + b))
+var n = Number(prompt("请输入等差数项数数值n:" + n))
+-100 <= a
+b <= 100
+0 < n <= 1000
+console.log(a + (b - a) * (n - 1))
+</script>
+<script id="ch0103/19" type="xx">
+var a = Number(prompt("请输入数值a:" + a))
+var b = Number(prompt("请输入数值b:" + b))
+1 <= a
+b <= 50000
+console.log(a * b)
+</script>
+<script id="ch0103/20" type="xx">
+var n = Number(prompt("请输入数值n:" + n))
+0 <= n <= 31
+console.log(Math.pow(2,n))
+</script>
+
+

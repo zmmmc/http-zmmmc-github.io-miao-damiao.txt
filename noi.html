@@ -72,8 +72,8 @@ console.log(v.toFixed(2))
 <script id="ch0103/13" type="xx">
 var x = Number(prompt("请输入一个三位数x:" + x))
 var a = x % 10
-var b = Math.truck((x - a) / 10 % 10)
-var c = Math.truck(x / 100)
+var b = Math.trunc((x - a) / 10 % 10)
+var c = Math.trunc(x / 100)
 console.log(String(a) + String(b) + String(c))
 </script>
 <script id="ch0103/14" type="xx">
@@ -164,10 +164,11 @@ if(n % 2 == 0){
 
 <script id="ch0104/04" type="xx">
   var n = Number(prompt("请输入数值n:" + n))
-if(n % 2 == 0){
-  console.log("even");
+  var x = n.charCode(0)
+if(x % 2 == 0){
+  console.log("YES");
 } else {
-  console.log("odd");
+  console.log("NO");
 }
 </script>
 
@@ -214,19 +215,19 @@ if(x % 15 == 0){
 <script id="ch0104/09" type="xx">
   var x = Number(prompt("请输入数值x:" + x))
 if(x % 105 == 0){
-  console.log("3" "5" "7");
+  console.log("3" + "5" + "7");
 }else if(x % 15 == 0){
-  console.log("3" "5")
+  console.log("3" + "5");
 }else if(x % 21 == 0){
-  console.log("3" "7")
+  console.log("3" + "7");
 }else if(x % 35 == 0){
-  console.log("5" "7")
+  console.log("5" + "7");
 }else if(x % 3 == 0){
-  console.log("3")
+  console.log("3");
 }else if(x % 5 == 0){
-  console.log("5")
+  console.log("5");
 }else if(x % 7 == 0){
-  console.log("7")
+  console.log("7");
 }else{
   console.log(n);
 }
@@ -253,9 +254,9 @@ if(x == 1 || x == 3 || x == 5){
 
 <script id="ch0104/12" type="xx">
   var x = Number(prompt("请输入办事总共距离x:" + x))
-if(x / 3 + 27 + 23 > x / 1.2){
+if(x / 3 + 27 + 23 < x / 1.2){
   console.log("Bike");
-}else if(x / 3 + 27 + 23 < x / 1.2){
+}else if(x / 3 + 27 + 23 > x / 1.2){
   console.log("Walk");
 }else{
   console.log("All");
@@ -264,11 +265,11 @@ if(x / 3 + 27 + 23 > x / 1.2){
 
 <script id="ch0104/13" type="xx">
   var N = Number(prompt("请输入浮点数N:" + N))
-if(0 <= N < 5)){
+if(N >= 0 && N < 5){
   console.log((-N+2.5).toFixed(3));
-}else if(5 <= N < 10){
+}else if(N >=5 && N < 10){
   console.log((2 - 1.5 * (N - 3) * (N - 3)).toFixed(3));
-}else if(10 <= N < 20){
+}else if(N >= 10 && N < 20){
   console.log((N / 2 - 1.5).toFixed(3));
 }
 </script>
@@ -313,10 +314,10 @@ if(x <= 1000 && a = y){
 
 <script id="ch0104/17" type="xx">
  var a = Number(prompt("请输入年份数值a:" + a))
- if(a % 4 == 0 && a % 400 == 0 && a % 3200 != 0)){
-   console.log(Y);
+ if((a % 4 == 0 && a % 100 != 0) || (a % 400 == 0 && a % 3200 != 0)){
+   console.log("Y");
  }else{
-   console.log(N);
+   console.log("N");
  }
 </script>
 
@@ -334,16 +335,16 @@ if(x <= 1000 && a = y){
  var x = Number(prompt("请输入参数一数值x:" + x))
  var y = Number(prompt("请输入参数二数值y:" + y)) 
  var z = prompt("请输入运算符号+或者-或者*或者/:" )
- if(z != + && z != - && z != * && z != /)){
-   console.log(Invalid operator);
- }else if(z = +){
+ if(z != "+" && z != "-" && z != "*" && z != "/"){
+   console.log("Invalid operator");
+ }else if(z == "+"){
    console.log(x + y);
- }else if(z = -){
+ }else if(z == "-"){
    console.log(x - y);
- }else if(z = *){
+ }else if(z == "*"){
    console.log(x * y);
- }else if(z = / && y == 0){
-   console.log(Divided by zero!);
+ }else if(z == "/" && y == 0){
+   console.log("Divided by zero!");
  }else{
    console.log(x / y);
  }
@@ -357,22 +358,22 @@ if(x <= 1000 && a = y){
  var x2 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)
  var y1 = -b / (2 * a) + Math.sqrt(4 * a * c - b * b) / (2 * a)
  var y2 = -b / (2 * a) - Math.sqrt(4 * a * c - b * b) / (2 * a)
- if(b * b = 4 * a * c)){
-   console.log(x1.toFixed(5) "=" + x2.toFixed(5));
+ if(b * b == 4 * a * c){
+   console.log("x1 = x2 ="+ x1);
  }else if(b * b > 4 * a * c){
    console.log(x1.toFixed(5),x2.toFixed(5));
  }else{
    console.log(y1.toFixed(5),y2.toFixed(5));
  }
- }
+ 
 </script>
 
 <script id="ch0104/21" type="xx">
  var y = Number(prompt("请输入经过总时长数值y:" + y))
  var n = Number(prompt("请输入一箱苹果数值n:" + n)) 
  var x = Number(prompt("请输入虫子吃掉一个苹果需要时长数值x:" + x)) 
- if(n - y / x >= 1){
-   console.log(Math.ceil(n - y / x))
+ if(n - y / x >= 0){
+   console.log(n - Math.ceil(y / x))
  }else{
    console.log(0)
  }

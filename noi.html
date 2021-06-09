@@ -66,15 +66,15 @@ console.log((a % b).toFixed(4))
 <script id="ch0103/12" type="xx">
 var r = Number(prompt("请输入小于100的非0球半径数值r:" + r))
 var pi = 3.14
-var s = 4 / (3 * pi * r * r * r)
-console.log(r.toFixed(2))
+var v = 4 / (3 * pi * r * r * r)
+console.log(v.toFixed(2))
 </script>
 <script id="ch0103/13" type="xx">
 var x = Number(prompt("请输入一个三位数x:" + x))
 var a = x % 10
-var b = Math.truck(x / 100)
-var c = Math.truck((x - b * 100) / 10)
-console.log(String(a) + String(c) + String(b))
+var b = Math.truck(x % 100 - a)
+var c = Math.truck(x / 100)
+console.log(String(a) + String(b) + String(c))
 </script>
 <script id="ch0103/14" type="xx">
 var r = Number(prompt("请输入圆桶底面半径数值r:" + r))
@@ -134,6 +134,7 @@ console.log(Math.pow(2,n))
 
 
 <script id="ch0104/01" type="xx">
+  var N
 if(N > 0){
   console.log("positive");
 }else if(N = 0){

@@ -15,7 +15,7 @@ var b = Number(prompt("请输入数值b:" + b))
 var c = Number(prompt("请输入数值c:" + c)) 
 -10000 < a , b , c < 10000
 c != 0
-console.log((a + b) / c)
+console.log(Math.floor((a + b) / c))
 </script>
 <script id="ch0103/04" type="xx">
 var a = Number(prompt("请输入数值a:" + a))
@@ -31,8 +31,8 @@ console.log((a / b).toFixed(9))
 <script id="ch0103/06" type="xx">
 var a = Number(prompt("请输入确诊数值a:" + a))
 var b = Number(prompt("请输入死亡数值b:" + b)) 
-var c = (b / a * 100) + "%"
-console.log(c.toFixed(3))
+var c = (b / a * 100) 
+console.log(c.toFixed(3) + "%")
 </script>
 <script id="ch0103/07" type="xx">
 var a = Number(prompt("请输入数值a:" + a))
@@ -40,7 +40,8 @@ var b = Number(prompt("请输入数值b:" + b))
 var c = Number(prompt("请输入数值c:" + c))
 var d = Number(prompt("请输入数值d:" + d)) 
 var x = Number(prompt("请输入数值x:" + x))
-console.log((a * Math.pow(x,3) + b * x * x + c * x + d).toFixed(7))
+var z = a * x * x * x + b * x * x + c * x + d
+console.log(z.toFixed(7))
 </script>
 <script id="ch0103/08" type="xx">
 var a = Number(prompt("请输入华氏度数值a:" + a))
@@ -49,7 +50,6 @@ console.log((5 * (a - 32) / 9).toFixed(5))
 <script id="ch0103/09" type="xx">
 var r = Number(prompt("请输入圆半径数值r:" + r))
 var pi = 3.14159
-0 < r <= 10000
 console.log((2 * r).toFixed(4))
 console.log((2 * pi * r).toFixed(4))
 console.log((pi * r * r).toFixed(4))
@@ -67,22 +67,22 @@ console.log((a % b).toFixed(4))
 <script id="ch0103/12" type="xx">
 var r = Number(prompt("请输入小于100的非0球半径数值r:" + r))
 var pi = 3.14
-0 < r < 100
-console.log((4 / (3 * pi * Math.pow(r,3))).toFixed(2))
+var s = 4 / (3 * pi * r * r * r)
+console.log(r.toFixed(2))
 </script>
 <script id="ch0103/13" type="xx">
 var x = Number(prompt("请输入一个三位数x:" + x))
 var a = x % 10
-var b = (x / 100).toFixed(0)
-var c = ((x - b * 100) / 10).toFixed(0)
-console.log("a" + "c" + "b")
+var b = Math.truck(x / 100)
+var c = Math.truck((x - b * 100) / 10)
+console.log(String(a) + String(c) + String(b))
 </script>
 <script id="ch0103/14" type="xx">
 var r = Number(prompt("请输入圆桶底面半径数值r:" + r))
 var h = Number(prompt("请输入圆桶深度数值h:" + h))
 var pi = 3.14159
-var x = pi * r * r * h / 1000
-console.log(x >= 20 ? "够喝" ： "不够喝") 
+var v = pi * r * r * h / 1000
+console.log(Math.ceil(v))
 </script>
 <script id="ch0103/15" type="xx">
 var n = Number(prompt("请输入原箱子内苹果数值n:" + n))
@@ -95,24 +95,35 @@ var a = Number(prompt("请输入坐标A上x轴数值a:" + a))
 var b = Number(prompt("请输入坐标A上y轴数值b:" + b))
 var c = Number(prompt("请输入坐标B上x轴数值c:" + c))
 var d = Number(prompt("请输入坐标B上y轴数值d:" + d))
-Math.abs(a) < 10000
-console.log(Math.sqrt((Math.pow(Math.abs(c-a),2)+Math.pow(Math.abs(d-b),2))).toFixed(3))
+var x = Math.pow(c-a,2)
+var y = Math.pow(d-b,2)
+console.log(Math.sqrt(x + y).toFixed(3))
+</script>
+<script id="ch0103/17" type="xx">
+var a = Number(prompt("请输入坐标A上x轴数值a:" + a))
+var b = Number(prompt("请输入坐标A上y轴数值b:" + b))
+var c = Number(prompt("请输入坐标B上x轴数值c:" + c))
+var d = Number(prompt("请输入坐标B上y轴数值d:" + d))
+var e = Number(prompt("请输入坐标B上x轴数值e:" + e))
+var f = Number(prompt("请输入坐标B上y轴数值f:" + f))
+var x = Math.sqrt(Math.pow(c-a,2) + Math.pow(d-b,2))
+var y = Math.sqrt(Math.pow(c-e,2) + Math.pow(d-f,2))
+var z = Math.sqrt(Math.pow(a-e,2) + Math.pow(b-f,2))
+var p = (x + y + z) / 2
+console.log(Math.sqrt(p * (p - x) * (p - y) * (p - z)).toFixed(2))
 </script>
 
 <script id="ch0103/18" type="xx">
 var a = Number(prompt("请输入等差数列a1数值a:" + a))
 var b = Number(prompt("请输入等差数列a2数值b:" + b))
 var n = Number(prompt("请输入等差数项数数值n:" + n))
--100 <= a
-b <= 100
-0 < n <= 1000
+
 console.log(a + (b - a) * (n - 1))
 </script>
 <script id="ch0103/19" type="xx">
 var a = Number(prompt("请输入数值a:" + a))
 var b = Number(prompt("请输入数值b:" + b))
-1 <= a
-b <= 50000
+
 console.log(a * b)
 </script>
 <script id="ch0103/20" type="xx">
@@ -122,3 +133,46 @@ console.log(Math.pow(2,n))
 </script>
 
 
+
+<script id="ch0104/01" type="xx">
+if(N > 0){
+  console.log("positive");
+}else if(N = 0){
+  console.log("zero");
+}else {
+  console.log("negative");
+}
+</script>
+
+<script id="ch0104/02" type="xx">
+if(a < 0){
+  a = -a
+}
+console.log(a)
+</script>
+
+<script id="ch0104/03" type="xx">
+if(n % 2 == 0){
+  console.log("even");
+} else {
+  console.log("odd")
+}
+</script>
+
+<script id="ch0104/04" type="xx">
+if(n % 2 == 0){
+  console.log("even");
+} else {
+  console.log("odd")
+}
+</script>
+
+<script id="ch0104/05" type="xx">
+if(x > y){
+  console.log(">");
+}else if(x = y){
+  console.log("=")
+}else{
+  console.log("<")
+}
+</script>

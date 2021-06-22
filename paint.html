@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas width="500" height="500"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated' //放大时的插帧方式：不插帧，直接放大像素
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    x = Math.round(x)
+    y = Math.round(y)
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  // 
+  //  * YOUR TASK
+  //     * 在 坐标 (42, 42) 画出一个点
+          dot(42, 42, color = "red")
+  //     * 画一条实线
+            var x = 500;
+              var y = 10;
+              for (var i = 0; i < x; i++) {
+                dot(i, y, color = "black")
+              }
+            
+  //     * 画一条一个实点一个空点的虚线
+              for (i = 0; i < x; i++) {
+                  y = 30
+                  if (i % 2 == 0) {
+                    dot(i, y, color = "black")
+                  }
+                }
+  //     * 画一条两个实点两个空点的虚线
+                for(i = 0; i < x; i++){
+                  y = 35
+                  if(i % 4 < 2){ //利用余数运算控制画点地方
+                    dot(i,y,color = "red")
+                  }//画点的周期为四，两个打点，两个不打则4的余数中前两个打，后两个不打
+                }
+  //     * 画一条三个实点两个空点的虚线
+  for (i = 0; i < x; i++) {
+      y = 40
+      if (i % 5 < 3) {
+        dot(i, y, color = "red")
+      }
+    }
+  //     * 画一条45度的斜线
+  // x = 40
+  // y = 40
+  // for (i = 0; i < x; i++) {
+  //   for (var j = 0; j < y; j++) {
+  //     if (i = j) {
+  //       dot(i, j, color = "black")
+  //     }
+  //   }
+  // }
+  for (var y = 80,x = 10; x <= 80; x++,y++){//同时申明xy，并同时增加或者减少形成
+    dot(x,y,color = "pink")
+  }
+  //     * 画一条30度的斜线（与x轴或y轴的夹角呈30度）
+  for(var x = 0; x <= 200; x++){
+    var y = Math.tan(Math.PI / 6) * x    //利用函数设置角度，30度为PI/6，与x轴夹角
+    dot(x,y, color = "red")
+  }
+  for(var y = 0; y <= 200; y++){
+    var x = Math.tan(Math.PI / 6) * y    //利用函数设置角度，30度为PI/6，与y轴夹角
+    dot(x, y, color = "red")
+  }
+  //     * 画一条跨越画布左上角和右下角的对角线
+   var x = Math.sqrt(500000)
+   var y = Math.sqrt(500000)
+    for (i = 0; i < x; i++) {
+      for (var j = 0; j < y; j++) {
+        if (i = j) {
+          dot(i, j, color = "black")
+        }
+      }
+    }
+  //     * 画一个空心矩形
+    // x = 180
+    // y = 170
+    // for (i = 70; i <= x; i++) {
+    //   dot(i, y, color = "black")
+    //   for (j = 70; j <= y; j++) {
+    //     dot(x, j, color = "black")
+    //   }
+    // }
+    // x = 180
+    // y = 70
+    // for (i = 70; i <= x; i++) {
+    //   dot(i, y, color = "black")
+    // }
+    // x = 70
+    // y = 170
+    // for (j = 70; j <= y; j++) {
+    //   dot(x, j, color = "black")
+    // }
+    var x1 = 150, y1 = 110
+    var x2 = 200, y2 = 140
+    for(var y = y1; y <= y2; y++){
+      for(var x = x1; x <= x2; x++){
+        //选取两个点，当点处于边缘时循环画出
+        if(x == x1 || x == x2 || y == y1 || y == y2){
+          dot(x,y)
+        }
+      }
+    }
+  //     * 画一个实心矩形
+
+  x = 140
+  y = 40
+  for (var i = 90; i < x; i++) {
+    for (var j = 10; j < y; j++) {
+      dot(i, j, color = "black")
+    }
+  }
+  //     * 画两个个空心的圆，居中：
+  //       * 一个半径为50像素
+  //画半径为50的圆的上下1/4.
+  // x = 250
+  //   y = 250
+  //   for (var i = 200; i <= 300; i++) {
+  //     for (var j = 200; j <= 300; j++) {
+  //       if (Math.sqrt(((i - 250) * (i - 250) + (j - 250) * (j - 250))) == 50) {
+  //         dot(i, j, color = "black")
+  //       }
+  //     }
+  //   }
+  for (var x = - 50 * Math.SQRT1_2; x <= 50 * Math.SQRT1_2; x++) {
+        var y = Math.sqrt(50 * 50 - x * x)
+        //设定坐标点在0，0处，向右偏移250的位置
+        dot(x + 250, y + 250, color = "red")
+        dot(x + 250, -y + 250, color = "red")
+      }
+      //画半径为50的圆的左右1/4.
+      for (var y = - 50 * Math.SQRT1_2; y <= 50 * Math.SQRT1_2; y++) {
+        var x = Math.sqrt(50 * 50 - y * y)
+        //设定坐标点在0，0处，向右偏移250的位置
+        dot(x + 250, y + 250, color = "red")
+        dot(-x + 250, y + 250, color = "red")
+      }
+  //       * 一个半径为200像素
+    // x = 250
+    //   y = 250
+    //   for (var i = -20; i <= 450; i+= 1) {
+    //     for (var j = -20; j <= 450; j+= 1) {
+    //       if (Math.sqrt(((i - 250) * (i - 250) + (j - 250) * (j - 250))) == 200) {
+    //         dot(i, j, color = "black")
+    //       }
+    //     }
+    //   }
+      //画半径为100的圆的上下1/4.
+      for(var x = - 100 * Math.SQRT1_2; x <= 100 * Math.SQRT1_2; x++){
+        var y = Math.sqrt(100 * 100 - x * x)
+        //设定坐标点在0，0处，向右偏移250的位置
+        dot(x + 250,y + 250, color = "red")
+        dot(x + 250, -y + 250, color = "red")
+      }
+      //画半径为100的圆的左右1/4.
+       for (var y = - 100 * Math.SQRT1_2; y <= 100 * Math.SQRT1_2; y++) {
+          var x = Math.sqrt(100 * 100 - y * y)
+          //设定坐标点在0，0处，向右偏移250的位置
+          dot(x + 250, y + 250, color = "red")
+          dot(-x + 250,y + 250, color = "red")
+        }
+      
+  //     * 画一个实心的圆，半径至少为100像素
+    x = 150
+    y = 350
+    for (var i = 50; i <= 250; i++) {
+      for (var j = 250; j <= 450; j++) {
+        if (Math.sqrt(((i - 150) * (i - 150) + (j - 350) * (j - 350))) <= 100) {
+          dot(i, j, color = "black")
+        }
+      }
+    }
+  //     * 画一个【大小合适】的sin(x)的图像
+  //半径为100
+    for(var x = -100; x <= 100; x++){
+      y = Math.sin(x / 20) * 20         //图形放大20倍
+      dot(x + 130, y + 130, "green")
+    }
+  //     * 画出rgb色彩空间的某一面（尺寸要大于100x100）
+  // for(var x = 0; x <= 255; x++){
+  //   for(var y = 0; y <= 255; y++){
+  //     dot(x + 180,y + 180,"rgb("+ x + "," + y +", 255")
+  //   }
+  // }
+  //通过改变x，y大小改变色彩空间大小，色彩空间范围为(0-255)
+    for (var x = 0; x <= 100; x++) {
+        for (var y = 0; y <= 100; y++) {
+          dot(x + 180, y + 180, "rgb(" + x * 2.55 + "," + y * 2.55 + ", 255")
+        }
+      }
+
+  //       如果做出上一题后，尝试将其每个点的坐标乘以一个矩阵（如(2,0,0,2)或(1,0.27得到新的位置，即绘制出被线性变幻后的色彩空间某一面
+  //       可以考虑如下几种矩阵：
+  //          2 0
+  //          0 2
+  //缩放矩阵，此矩阵放大两倍 (2x ,2y)
+  for (var x = 0; x <= 100; x++) {
+      for (var y = 0; y <= 100; y++) {
+        dot(2 * x + 180,2 * y + 180, "rgb(" + x * 2.55 + "," + y * 2.55 + ", 255")
+        //在每个点的右边加一个点
+        dot(2 * x + 1 + 180, 2 * y + 180, "rgb(" + x * 2.55 + "," + y * 2.55 + ", 255")
+        //在每个点的下边加一个点
+        dot(2 * x + 180, 2 * y + 1 + 180, "rgb(" + x * 2.55 + "," + y * 2.55 + ", 255")
+        //在每个点的右下边加一个点
+        dot(2 * x + 1 + 180, 2 * y + 1 + 180, "rgb(" + x * 2.55 + "," + y * 2.55 + ", 255")
+      }
+    }
+  //          ------
+  //          1  0.27
+  //          0  1
+    //倾斜矩阵 (x , 0.27x + y)
+      for (var x = 0; x <= 100; x++) {
+          for (var y = 0; y <= 100; y++) {
+            dot(x + 180, 0.27 * x + y + 180, "rgb(" + x * 2.55 + "," + y * 2.55 + ", 255")
+          }
+        }
+  //          ------
+  // 旋转矩阵 (0.5x - 0.87y, 0.87x + 0.5y)
+  //          0.5    0.87
+  //          -0.87  0.5
+  //旋转导致有些点为空点 。可以通过增加采点数量覆盖 将x++改为x += 0.7
+      for (var x = 0; x <= 100; x += 0.7) {
+          for (var y = 0; y <= 100; y += 0.7) {
+            dot(0.5 * x - 0.87 * y + 180, 0.87 * x + 0.5 * y + 180, "rgb(" + x * 2.55 + "," + y * 2.55 + ", 255")
+          }
+        }
+
+  //  
+</script>
+<script>
+  // 不可更改上面的代码
+  // 你的代码写在这里
+  // YOUR CODE GOES BELOW
+
+
+  
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

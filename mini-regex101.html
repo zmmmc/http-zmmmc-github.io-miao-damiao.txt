@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    textarea{
+      display: block;
+      width: 400px;
+      height: 200px;
+      margin: 0px;
+      padding: 5px;
+      font-size: 16px;
+      font-family: 'Courier New', Courier, monospace;
+      position: relative;
+      background-color: transparent;
+      z-index: 5;
+      /* color: transparent; */
+       line-height: 1.3em;
+    }
+    div{
+      width: 410px;
+      height: 200px;
+      font-size: 16px;
+      font-family: 'Courier New', Courier, monospace;
+      position: relative;
+      overflow: hidden;
+    }
+    #result{
+      line-height: 1.3em;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 5px;
+      font-size: 16px;
+      top: 0px;
+      left: 2px;
+      color: transparent;
+      word-wrap: normal;
+      font-family: 'Courier New', Courier, monospace;
+      white-space: pre-wrap;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    #cont{
+      width: 298px;
+    }
+    em{
+      background-color: aqua;
+      font-style: normal;
+    }
+    em:empty{
+      border-left: 1px dotted red;
+      background-color: transparent;
+    }
+
+    p{
+      color: red;
+      margin: 0;
+      height: 1em;
+    }
+   #change{
+      width: 410px;
+      height: 200px;
+      border: 1px solid black;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+  </style>
+  <script>
+    // window.onload = function(){
+
+    // }
+  </script>
+</head>
+<body>
+  <!-- onclick="run()"为每次点击触发这个run()函数 -->
+  g<input type="checkbox" onclick="run()" id="global" checked id="globe">
+  i<input type="checkbox" onclick="run()" id="ignorCase" id="icon">
+  m<input type="checkbox" onclick="run()" id="multiline" id="multype"><br>
+  请输入正则表达式<br><input type="text" id="cont" value="f." onkeyup="run()"><br>
+  <p id="regError"></p><br>
+  请输入内容<br>
+  <div>
+    <!-- onscroll为滚动滚动时触发setScroll()函数 -->
+    <textarea name="" onscroll="setScroll()" id="strInput" cols="30" rows="10" onkeyup="run()">jdhfsd foof
+      fod forra rarr ajj jcaf
+      zazrf zem zac zaza caza czaie 
+      ahsdjahc ahdaj hzz  ashdjhzz 
+      ajdhzzawd   hzahzfhz
+      jaszzawhc a  asfz 
+      jfhah jhfas hjasd 
+      hfhaaaff fob af fasf foac
+      fod forra rarr ajj jcaf
+      zazrf zem zac zaza caza czaie
+      ahsdjahc ahdaj hzz ashdjhzz
+      ajdhzzawd hzahzfhz
+      jaszzawhc a asfz
+      jfhah jhfas hjasd
+      hfhaaaff fob af fasf foac
+    </textarea><br>
+    <pre id="result"></pre>
+  </div><br><br>
+  请输入需要替换的内容<br><input type="text" id="repla" value="#" onkeyup="run()"><br>
+  <pre id="change"></pre>
+  <script>
+    //设置滚轮函数，让pre的定位随滚轮滚动发生变化
+    function setScroll(){
+      var scrollTop = strInput.scrollTop
+      result.style.top = -strInput.scrollTop + "px"
+    }
+    
+    function run(){
+      //获取输入的正则内容
+      let regContent = cont.value
+      let flags = getFlags()
+      //如果正则内容为空，则弹出一个报错后返回
+      if(regContent == ""){
+        result.innerHTML = ""
+        regError.innerHTML = "Please input any ergular expression"
+        return
+      }
+      
+      try{
+        var re = new RegExp(regContent,flags)
+        regError.innerHTML = ""
+      }catch(e){
+        //当正则报错后输出报错的内容，并将pre内容设置为空后返回
+        console.log(e)
+        regError.innerHTML = e.message
+        result.innerHTML = ""
+        return
+      }
+      console.log(re)
+      //获取textarea中的内容
+      let str = strInput.value
+      let resultHTML = ""
+      let match
+      let lastIndex = re.lastIndex
+      //当全局被选中时，匹配textarea全部内容，把内容拼接进pre中，并将正则目标内容用em标签包裹上色
+      if(re.global){
+        while (match = re.exec(str)) {
+          console.log(match)
+          resultHTML += str.slice(lastIndex,match.index)
+          resultHTML += "<em>" + match[0] + "</em>"
+          lastIndex = re.lastIndex
+          //防止正则中匹配开头死循环，当第一个匹配为空时，匹配的下标向前移动一步
+          if(match[0] == ""){
+            re.lastIndex++
+          }
+        }
+        //拼接最后一个匹配结果后面的所有内容
+        resultHTML += str.slice(lastIndex)
+        //当没有选中全局
+      }else{
+        //匹配第一个遇到的内容
+        match = re.exec(str)
+        resultHTML += str.slice(lastIndex,match.index)
+        //用em标签包裹匹配的内容
+        resultHTML += "<em>" + match[0] + "</em>"
+        //拼接匹配内容后的内容
+        resultHTML += str.slice(match[0].length + match.index)
+      }
+      result.innerHTML = resultHTML
+      if(repla.value == ""){
+        change.innerHTML = strInput.value
+      }else{
+        change.innerHTML = strInput.value.replace(re,repla.value)
+      }
+
+    }
+    run()
+    //设置全局变量g，大小写忽略i和多行m
+    function getFlags(){
+      let flag = ""
+      if(global.checked){
+        flag += "g"
+      }
+      if(ignorCase.checked){
+        flag += "i"
+      }
+      if(multiline.checked){
+        flag += "m"
+      }
+      return flag
+    }
+
+  </script>
+</body>
+</html>

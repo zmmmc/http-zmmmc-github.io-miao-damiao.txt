@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  section {
+    position: relative;
+    margin: 400px 500px;
+  }
+
+  div {
+    border-radius: 9999px;
+  }
+
+  #sun {
+    width: 300px;
+    height: 300px;
+    background-image: linear-gradient(30deg, rgb(255, 0, 119), rgb(255, 0, 0), rgba(200, 255, 0, 0.884));
+    transition: 5s;
+    position: absolute;
+  }
+
+  #earth {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(67, 179, 199);
+    position: absolute;
+  }
+
+  #moon {
+    width: 10px;
+    height: 10px;
+    background-color: wheat;
+    position: absolute;
+  }
+</style>
+<script>
+  window.onload = function () {
+    let sw = sun.offsetWidth / 2
+    let sh = sun.offsetHeight / 2
+    let ew = earth.offsetWidth / 2
+    let eh = earth.offsetHeight / 2
+    requestAnimationFrame(
+
+      function turn(time) {
+        let angle_sun = time * 0.001
+        let angle_earth = time * 0.0005
+        let angle_moon = time * 0.002
+
+        let x1 = Math.cos(angle_sun) * 50
+        let y1 = Math.sin(angle_sun) * 50
+        sun.style.left = x1 + "px"
+        sun.style.top = y1 + "px"
+
+        let x2 = Math.cos(angle_earth) * 260 + sw
+        let y2 = Math.sin(angle_earth) * 260 + sh
+        earth.style.left = x2 + "px"
+        earth.style.top = y2 + "px"
+
+        let x3 = Math.cos(angle_moon) * 70 + x2 + ew
+        let y3 = Math.sin(angle_moon) * 70 + y2 + eh
+        moon.style.left = x3 + "px"
+        moon.style.top = y3 + "px"
+
+        requestAnimationFrame(turn)
+      }
+    )
+  }
+</script>
+
+<body>
+  <section>
+    <div id="sun"></div>
+    <div id="earth"></div>
+    <div id="moon"></div>
+  </section>
+</body>
+
+</html>

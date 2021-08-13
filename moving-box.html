@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #box1 {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+  }
+
+  #box2 {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(24, 163, 140);
+    position: absolute;
+    opacity: 0.5;
+  }
+</style>
+
+<body>
+  <div style="left: 8px; top: 8px;" id="box1"></div>
+  <div style="left: 8px; top: 8px;" id="box2"></div>
+  <script>
+    // let speedx
+    // let speedy
+    // let leftPress
+    // let rightPress
+    // let upPress
+    // let downPress
+    // document.addEventListener("keydown", function (e) {
+    //   console.log(e)
+    //   if (e.key == "ArrowRight") {
+    //     speedx = 2
+    //     rightPress = true
+    //   }
+    //   if (e.key == "ArrowLeft") {
+    //     speedx = -2
+    //     leftPress = true
+    //   }
+    //   if (e.key == "ArrowUp") {
+    //     speedy = -2
+    //     upPress = true
+    //   }
+    //   if (e.key == "ArrowDown") {
+    //     speedy = 2
+    //     downPress = true
+    //   }
+    // })
+    // document.addEventListener("keyup", function (e) {
+    //   console.log(e)
+    // if (e.key == "ArrowRight") {
+    //   rightPress = false
+    //   if (leftPress) {
+    //     speedx = -2
+    //   } else {
+    //     speedx = 0
+    //   }
+    // }
+    // if (e.key == "ArrowLeft") {
+    //   leftPress = false
+    //   if (rightPress) {
+    //     speedx = 2
+    //   } else {
+    //     speedx = 0
+    //   }
+    // }
+    // if (e.key == "ArrowUp") {
+    //   upPress = false
+    //   if (downPress) {
+    //     speedy = -2
+    //   } else {
+    //     speedy = 0
+    //   }
+    // }
+    // if (e.key == "ArrowDown") {
+    //   downPress = false
+    //   if (upPress) {
+    //     speedy = 2
+    //   } else {
+    //     speedy = 0
+    //   }
+    // }
+    // })
+    // requestAnimationFrame(function move() {
+    //   box1.style.left = box1.offsetLeft + speedx + "px"
+    //   box1.style.top = box1.offsetTop + speedy + "px"
+    //   requestAnimationFrame(move)
+    // })
+    go(box1, "ArrowRight", "ArrowLeft", "ArrowUp", "ArrowDown")
+    go(box2, "d", "a", "w", "s")
+
+
+    function go(ele_id, r, l, u, d) {
+      //设置上下移动的速度
+      let speedx = 0
+      let speedy = 0
+      let leftPress = false
+      let rightPress = false
+      let upPress = false
+      let downPress = false
+
+      //设置键盘按下的监听事件
+      document.addEventListener("keydown", function (e) {
+
+        console.log(e)
+        //键盘按下右键，则右键下压为真，速度不为0
+        if (e.key == r) {
+          speedx = 2
+          rightPress = true
+        }
+        if (e.key == l) {
+          speedx = -2
+          leftPress = true
+        }
+        if (e.key == u) {
+          speedy = -2
+          upPress = true
+        }
+        if (e.key == d) {
+          speedy = 2
+          downPress = true
+        }
+      })
+
+      //设置键盘松开监听事件
+      document.addEventListener("keyup", function (e) {
+
+        console.log(e)
+        //如果右键松开，左键仍按着，那左键依旧速度运动，否则为0停止运动
+        if (e.key == r) {
+          rightPress = false
+          if (leftPress) {
+            speedx = -2
+          } else {
+            speedx = 0
+          }
+        }
+        if (e.key == l) {
+          leftPress = false
+          if (rightPress) {
+            speedx = 2
+          } else {
+            speedx = 0
+          }
+        }
+        if (e.key == u) {
+          upPress = false
+          if (downPress) {
+            speedy = -2
+          } else {
+            speedy = 0
+          }
+        }
+        if (e.key == d) {
+          downPress = false
+          if (upPress) {
+            speedy = 2
+          } else {
+            speedy = 0
+          }
+        }
+      })
+      //令开始运动事件为0
+      let startTime = 0
+      requestAnimationFrame(function move(time) {
+        //移动时间减去开始时间得到新的开始时间
+        let diffTime = time - startTime
+        startTime = time
+        ele_id.style.left = ele_id.offsetLeft + speedx * time * 0.0002 + "px"
+        ele_id.style.top = ele_id.offsetTop + speedy * time * 0.0002 + "px"
+        requestAnimationFrame(move)
+      })
+
+    }
+  </script>
+</body>
+
+</html>

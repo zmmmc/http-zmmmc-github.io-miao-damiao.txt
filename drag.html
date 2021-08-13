@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    user-select: none;
+  }
+
+  #box1 {
+    background-image: linear-gradient(orange,red,skyblue);
+  }
+
+  #box2 {
+    background-image: linear-gradient(rgb(21, 255, 0),rgb(249, 253, 10),rgb(75, 200, 250));
+    /* opacity: 0.3; */
+  }
+
+  #box3 {
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(255, 255, 255),rgb(255, 0, 0));
+    /* opacity: 0.6; */
+  }
+
+  section {
+    width: 800px;
+    height: 800px;
+    border: 1px solid black;
+  }
+</style>
+
+<body>
+  <section id="sec">
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+  </section>
+
+  <script>
+    let box1 = document.getElementById("box1")
+    let box2 = document.getElementById("box2")
+    let box3 = document.getElementById("box3")
+    drag(box1)
+    drag(box2)
+    drag(box3)
+    function drag(ele_id) {
+      let maxZindex = 10
+      ele_id.addEventListener("mousedown", function (e) {
+        ele_id.style.zIndex = maxZindex++
+        //获取鼠标在元素中的位置
+        let ol = e.pageX - ele_id.offsetLeft
+        let ot = e.pageY - ele_id.offsetTop
+        function move(e) {
+          //如果鼠标移动时没有任何键按下,取消鼠标移动的绑定事件
+          if(e.which === 0 || e.buttons === 0){
+             window.removeEventListener("mousemove", move)
+             return
+          }
+          //获取鼠标移动的位置
+          let left = e.pageX - ol
+          let top = e.pageY - ot
+          //在元素距离父元素边框50px进行磁吸效果
+          if(left < 50){
+            left = 0
+          }
+          if(left > sec.offsetWidth - ele_id.offsetWidth - 50){
+            left = sec.offsetWidth - ele_id.offsetWidth
+          }
+          if (top < 50) {
+            top = 0
+          }
+          if (top > sec.offsetHeight - ele_id.offsetHeight - 50) {
+            top = sec.offsetHeight - ele_id.offsetHeight 
+          }
+          //元素移动位置就等于鼠标移动位置
+          ele_id.style.left = left + "px"
+          ele_id.style.top = top + "px"
+        }
+        window.addEventListener("mousemove", move)
+        
+      })
+    }
+
+  </script>
+</body>
+
+</html>

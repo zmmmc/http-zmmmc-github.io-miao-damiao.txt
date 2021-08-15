@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      position: absolute;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+      //拿到所有div，并放入一个数组
+      let divs = Array.from(document.querySelectorAll("div"))
+      let section = document.querySelector("section")
+      //将创建的按钮存入数组
+      let buttons = []
+      //遍历所有的div并且在每个div前增加一个button
+      for(let div of divs.reverse()){
+        div.style.display = "none"
+        let button = document.createElement("button")
+        buttons.push(button)
+        button.textContent = div.dataset.tabname
+        section.prepend(button)
+        //设置按钮监听事件，当按钮被按下，对应div内容出现，其他隐藏
+        button.addEventListener("click", e =>{
+          divs.forEach(it => it.style.display = "none")
+          div.style.display = "block"
+          //设置按钮的样式，将其他的按钮样式取消
+          buttons.forEach(it => it.style.backgroundColor = "")
+          button.style.backgroundColor = "skyblue"
+        })
+        //让第一个按钮处于点击状态
+        section.firstElementChild.click()
+      }
+
+    }
+  </script>
+</head>
+<body>
+  <section>
+    <div data-tabname="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illo explicabo, odio ut reprehenderit vel nemo quae numquam labore vitae sunt quaerat dicta, dignissibusdam?</div>
+    <div data-tabname="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illo explicabo, odio ut reprehenderit vel nemo quae numquam labore vitae sunt quaera, dignissimos similique quibusdam nulla veritatis. Amet, quibusdam?</div>
+    <div data-tabname="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illo explicabo, odio ut reprehenderit vel nemo quae numquam labore vitae sun, digniss?</div>
+  </section>
+</body>
+</html>

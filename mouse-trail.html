@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div {
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+    position: absolute;
+  }
+</style>
+
+<body>
+  <div></div>
+  <div style="background-color: red;"></div>
+  <div style="background-color: salmon;"></div>
+</body>
+<script>
+  div = document.querySelectorAll("div")
+  window.addEventListener("mousemove", e => {
+
+    requestAnimationFrame(
+      function whirl(time) {
+        let angle = time * 0.001
+        let angle2 = time * -0.003
+        let x = Math.cos(angle) * 55
+        let y = Math.sin(angle) * 55
+        let x1 = Math.cos(angle2) * 55
+        let y1 = Math.sin(angle2) * 55
+        div[0].style.left = x1 + e.pageX + "px"
+        div[0].style.top = y1 + e.pageY + "px"
+        div[1].style.left =  x * 0.5 + e.pageX + "px"
+        div[1].style.top = y * 0.5 + e.pageY + "px"
+        div[2].style.left = x * 1.5 + e.pageX + "px"
+        div[2].style.top = y * 1.5 + e.pageY + "px"
+        requestAnimationFrame(whirl)
+      }
+    )
+  })
+</script>
+
+</html>

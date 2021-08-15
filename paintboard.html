@@ -23,7 +23,7 @@
   }
 
   svg {
-    width: 100%;
+    width: 1760px;
     height: 800px;
     position: absolute;
   }
@@ -36,55 +36,127 @@
 
 <body>
   <div>
-    <svg></svg>
+    <!--version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 800 800" svg保存需要添加的内容  -->
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 1760 800"></svg>
   </div><br>
+  工具 <button onclick=" tool = 'line' ">📉</button>
+  <button onclick=" tool = 'circle' ">⚪</button>
+  <button onclick=" tool = 'rect' ">⬜</button>
   颜色 <input type="color" id="colorInput">
   线条粗细 <input type="range" id="lineWidth" min="1" max="18" value="2">
   <span>2</span>
+  <button onclick=" save() ">保存</button><br>
+  矩形水平方向圆角<input type="range" id="horRadius" min="1" max="99"><span></span><br>
+  矩形垂直方向圆角<input type="range" id="verRadius" min="0" max="99"><span></span>
   <script>
-    let draw = false
+
     let div = document.querySelector("div")
 
     let svg = document.querySelector("svg")
-    let lastPos = null
 
-    document.addEventListener("mousedown", function (e) {
+    let tool = "line"
 
-      let g = document.createElementNS("http://www.w3.org/2000/svg", "g")
-      function move(e) {
 
-        // console.log(e)
+    svg.addEventListener("mousedown", function (e) {
+      drawNotSave = true
+      if (tool == "line") {
+
         let pos = mousePos(svg)
-        //创建svg元素 g来保存一条线的信息
-        let line = document.createElementNS("http://www.w3.org/2000/svg", "line")
-        if (lastPos == null) {
-          line.setAttribute("x1", pos.x)
-          line.setAttribute("y1", pos.y)
-        } else {
-          line.setAttribute("x1", lastPos.x)
-          line.setAttribute("y1", lastPos.y)
-        }
-        line.setAttribute("x2", pos.x)
-        line.setAttribute("y2", pos.y)
+        //创建折线元素 polyline元素是SVG的一个基本形状，用来创建一系列直线连接多个点。
+        //典型的一个polyline是用来创建一个开放的形状，最后一点不与第一点相连。欲了解闭合形状
+        let polyline = document.createElementNS("http://www.w3.org/2000/svg", "polyline")
+
         //设置线条颜色
-        line.setAttribute("stroke", colorInput.value)
+        polyline.setAttribute("stroke", colorInput.value)
         //设置线条的宽度
-        line.setAttribute("stroke-width", lineWidth.value)
+        polyline.setAttribute("stroke-width", lineWidth.value)
         //设置线条的边缘性质，默认为"butt"，无外包长方形的边角，"round"，圆形边角，"square"外包长方形边角
-        line.setAttribute("stroke-linecap", "round")
+        polyline.setAttribute("stroke-linecap", "round")
+        //设置折线折转时的形状
+        polyline.setAttribute("stroke-linejoin", "round")
+        //折线会自动填充，需要将填充去掉
+        polyline.setAttribute("fill", "none")
 
-        lastPos = pos
-        //将画的内容放入g标签中,将g放入svg画板里
-        svg.append(g)
-        g.append(line)
+        svg.append(polyline)
+        //设置点的坐标
+        let points = `${pos.x} ${pos.y} `
+        //将坐标点设置在polyline上
+        polyline.setAttribute("points", points)
+        function move(e) {
 
+          let pos = mousePos(svg)
+          //鼠标移动创建新的坐标拼接在前面的坐标之前
+          points += `${pos.x} ${pos.y} `
+          //将后面拼接的坐标设置到polyline上
+          polyline.setAttribute("points", points)
+
+        }
+        document.addEventListener("mousemove", move)
+        document.addEventListener("mouseup", function () {
+          lastPos = null
+          document.removeEventListener("mousemove", move)
+        })
       }
-      document.addEventListener("mousemove", move)
-      document.addEventListener("mouseup", function () {
-        lastPos = null
-        // draw = false
-        document.removeEventListener("mousemove", move)
-      })
+
+      if (tool == "circle") {
+        let ellipse = document.createElementNS("http://www.w3.org/2000/svg", "ellipse")
+        svg.append(ellipse)
+        ellipse.setAttribute("stroke", colorInput.value)
+        ellipse.setAttribute("stroke-width", lineWidth.value)
+        ellipse.setAttribute("fill", "none")
+        //起点
+        let startPos = mousePos(svg)
+        function drawElipse() {
+          //终点
+          let currPos = mousePos(svg)
+          //设置圆心
+          let cx = (startPos.x + currPos.x) / 2
+          let cy = (startPos.y + currPos.y) / 2
+          //将圆心设置到圆上
+          ellipse.setAttribute("cx", cx)
+          ellipse.setAttribute("cy", cy)
+          //设置长短轴
+          let rx = Math.abs(startPos.x - currPos.x) / 2
+          let ry = Math.abs(startPos.y - currPos.y) / 2
+          ellipse.setAttribute("rx", rx)
+          ellipse.setAttribute("ry", ry)
+        }
+        document.addEventListener("mousemove", drawElipse)
+        document.addEventListener("mouseup", function () {
+          document.removeEventListener("mousemove", drawElipse)
+        })
+      }
+
+      if (tool == "rect") {
+        let rect = document.createElementNS("http://www.w3.org/2000/svg", "rect")
+        svg.append(rect)
+        rect.setAttribute("stroke", colorInput.value)
+        rect.setAttribute("stroke-width", lineWidth.value)
+        rect.setAttribute("fill", "none")
+        let startCoord = mousePos(svg)
+        function drawRect(e) {
+          let endCoord = mousePos(svg)
+          let width = endCoord.x - startCoord.x
+          let height = endCoord.y - startCoord.y
+          let x = e.pageX - width
+          let y = e.pageY - height
+          rect.setAttribute("width", width)
+          rect.setAttribute("height", height)
+          rect.setAttribute("x", x)
+          rect.setAttribute("y", y)
+          //设置水平与垂直方向的圆角
+          rect.setAttribute("rx", horRadius.value)
+          rect.setAttribute("ry", verRadius.value)
+        }
+        document.addEventListener("mousemove", drawRect)
+        document.addEventListener("mouseup", function () {
+          document.removeEventListener("mousemove", drawRect)
+        })
+      }
+
+
     })
 
     //当svg存在时，按住ctrl+z键撤销svg创建的最后一个元素
@@ -108,6 +180,30 @@
         x: window.event.clientX - box.x,
         y: window.event.clientY - box.y,
       }
+    }
+
+    let drawNotSave = false
+    //当鼠标在画板按下时便进入判断需要保存，直接退出会弹出是否保存提示
+    window.addEventListener("beforeunload", e => {
+      if (drawNotSave) {
+        return e.returnValue = "还未保存" || e.preventDefault()
+      }
+    })
+    function save() {
+      //当画板内容保存后则不进入之前保存提示
+      drawNotSave = false
+      //拿到svg的源代码
+      let svgSource = svg.outerHTML
+      //创建一个文件，保存文件的内容以及文件的类型
+      let blob = new Blob([svgSource], { type: "image/xml+svg" })
+      //创建一个链接，链接到保存的文件
+      let url = URL.createObjectURL(blob)
+      //创建一个a标签，保存上面创建的链接
+      let anchor = document.createElement("a")
+      anchor.href = url
+      //下载链接内容，以xxx.svg命名
+      anchor.download = "xxaa.svg"
+      anchor.click()
     }
   </script>
 </body>

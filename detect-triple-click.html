@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let lastTime = 0
+    let c = 1
+    let id
+    window.addEventListener("click", e =>{
+      console.log("click")
+      let time  = Date.now()
+      clearTimeout(id)
+      //停止两百毫秒重置c为1
+      id = setTimeout(() =>{
+        c = 1
+      },200)
+      if (time - lastTime < 200){
+        c++
+      }
+      if(c == 2){
+        console.log("double")
+      }
+      if(c == 3){
+        console.log("triple")
+      }
+      if(c == 4){
+        console.log("quar")
+      }
+
+      lastTime = time
+    })
+
+    window.addEventListener("click", e => {
+      //检测鼠标点击次数，1-3之间
+      console.log(e.detail)
+    })
+  </script>
+</body>
+</html>
